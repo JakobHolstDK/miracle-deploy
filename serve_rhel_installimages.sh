@@ -12,7 +12,7 @@ mkdir -p /tmp/serve
 
 for ISO in `ls -1 ~/Downloads|grep \.iso$ |grep -v "([0-9]*)"`
 do	
-	NAME=`echo $ISO |awk -F'\.iso' '{ print $1}'`
+	NAME=`echo $ISO |awk -F'.iso' '{ print $1}'`
 	echo $NAME
 	sudo unmount /tmp/serve/$NAME >/dev/null 2>&1
 	sudo rm -fr /tmp/serve/$NAME >/dev/null 2>&1
