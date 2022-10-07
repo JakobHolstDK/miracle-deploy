@@ -1,0 +1,10 @@
+{
+    "packages": [
+        "git",
+        "xauth",
+        "virt-manager",
+        "python3",
+        "python3-venv",
+	"jq"
+    ]
+}
