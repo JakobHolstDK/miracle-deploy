@@ -1,0 +1,567 @@
+    1  sudo apt update
+    2  apt update
+    3  apt dist-upgrade 
+    4  reboot
+    5  exit
+    6  ls
+    7  virt-install 
+    8  useradd -m knowit
+    9  ls -rlt
+   10  virt-manager 
+   11  exit
+   12  virt-manager 
+   13  apt install xauth
+   14  virt-manager 
+   15  exit
+   16  virt-manager 
+   17  exit
+   18  ls -lrt
+   19  apt install virt-manager
+   20  df
+   21  ls
+   22  rm *
+   23  ls
+   24  cd /opt
+   25  ls
+   26  git clone https://github.com/JakobHolstDK/miracle-deploy.git
+   27  apt install git
+   28  git clone https://github.com/JakobHolstDK/miracle-deploy.git
+   29  cd miracle-deploy/
+   30  ls
+   31  mkdir bin
+   32  cd bin/
+   33  ls
+   34  cd ..
+   35  mkdir stash
+   36  mkdir config
+   37  mv *.cfg config/
+   38  ls
+   39  mkdir cert
+   40  mv ca
+   41  mv ca* cert/
+   42  ls
+   43  mv *.sh bin/
+   44  ls -lrt
+   45  em rhel-server-7.0-x86_64-dvd.iso 
+   46  ls
+   47  rm rhel-server-7.0-x86_64-dvd.iso 
+   48  ls
+   49  mkdir ui
+   50  cd ui
+   51  ls
+   52  cd ..
+   53  mkdir venv
+   54  pwd
+   55  cd  ui
+   56  pip3
+   57  cd ..
+   58  mkdir requirements
+   59  cd requirements/
+   60  mkdir debian11
+   61  cd debian11/
+   62  ls
+   63  vi packages.yml
+   64  atp-cache search git
+   65  apt-cache search git
+   66  apt-cache search git |grep 
+   67  apt-cache search git |grep ^git
+   68  history |grep apt
+   69  apt-cache search python3[A
+   70  ls
+   71  vi packages.yml
+   72  vi packages.json
+   73  rm packages.yml 
+   74  vi packages.json
+   75  jq
+   76  vi packages.json
+   77  apt install -y jq
+   78  cd ..
+   79  vi init
+   80  vi setup.sh
+   81  ls
+   82  mkdir inventory
+   83  cd inventory/
+   84  vi inventory.sh
+   85  virsh 
+   86  cd ..
+   87  ls
+   88  cd ..
+   89  ls
+   90  apt search minukube
+   91  cd miracle-deploy/
+   92  lks
+   93  sl
+   94  ks
+   95  ls
+   96  cd bin/
+   97  vi mirdepoy
+   98  ls
+   99  vi mirdepoy
+  100  cd ..
+  101  vi setup.sh 
+  102  ls -rtl
+  103  ls bin/
+  104  git pull 
+  105  git status
+  106  git add .
+  107  git status
+  108  git commit -a -m "clean"
+  109  git config --global user.email "jho@miracle.dk"
+  110  git config --global user.name "Jakob Holst"
+  111  git commit -a -m "clean"
+  112  git push
+  113  apt install gh
+  114  apt search git
+  115  apt search gh
+  116  apt-cache search gh
+  117  vi bin/install_gh.sh
+  118  bash bin/install_gh.sh 
+  119  vi bin/install_gh.sh
+  120  bash bin/install_gh.sh 
+  121  vi bin/install_gh.sh
+  122  bash bin/install_gh.sh 
+  123  vi bin/install_gh.sh
+  124  bash bin/install_gh.sh 
+  125  gh 
+  126  gh login
+  127  gh auth
+  128  gh auth login
+  129  gh repo list
+  130  git push
+  131  ls -rtl
+  132  vi ~/.profile 
+  133  exit
+  134  cd /opt/miracle-deploy/
+  135  ls bin/
+  136  chmod 700 bin/install_gh.sh 
+  137  install_gh.sh 
+  138  vi bin/install_hashicorp.sh
+  139  chmod 700 bin/install_hashicorp.sh 
+  140  install_hashicorp.sh 
+  141  vi bin/install_hashicorp.sh
+  142  install_hashicorp.sh 
+  143  vi bin/install_hashicorp.sh
+  144  vi bin/init-debian.sh
+  145  chmod 700 bin/init-debian.sh 
+  146  init-debian.sh 
+  147  rm /etc/apt/sources.list.d/hashicorp.list
+  148  init-debian.sh 
+  149  vi bin/init-debian.sh
+  150  init-debian.s
+  151  init-debian.sh 
+  152  apt-file update
+  153  install_hashicorp.sh 
+  154  install_hashicorp.sh
+  155  rm /etc/apt/sources.list.d/hashicorp.list
+  156  apt-file search lsb_release
+  157  vi bin/init-debian.sh
+  158  init-debian.sh 
+  159  install_hashicorp.sh
+  160  apt-file search lsb_release
+  161  rm /etc/apt/sources.list.d/hashicorp.list
+  162  apt-file search lsb_release
+  163  vi bin/init-debian.sh
+  164  init-debian.sh 
+  165  install_hashicorp.sh
+  166  vault 
+  167  tmux
+  168  vi bin/init-debian.sh
+  169  init-debian.sh 
+  170  tmux
+  171  vi bin/init-debian.sh
+  172  vi /etc/environment
+  173  vault kv list
+  174  vault kv list 
+  175  vault kv github/miracledemo
+  176  exit
+  177  vault kv github/miracledemo
+  178  vault kv get github/miracledemo 
+  179  ls
+  180  vi bin/init-debian.sh
+  181  ls
+  182  cd /opt/miracle-deploy/
+  183  ls
+  184  vi bin/init-debian.sh
+  185  init-debian.sh 
+  186  vi bin/init-debian.sh
+  187  init-debian.sh 
+  188  vi bin/init-debian.sh
+  189  init-debian.sh 
+  190  vi bin/init-debian.sh
+  191  init-debian.sh 
+  192  ls -l /etc/ssh/trusted-user-ca-keys.pem
+  193  vi bin/init-debian.sh
+  194  init
+  195  init-debian.sh 
+  196  vi bin/signssh
+  197  chmod 755 bin/signssh 
+  198  signssh 
+  199  vi bin/signssh
+  200  signssh 
+  201  ssh root@consul.traeckle.com
+  202  vi bin/signssh
+  203  vi bin/init-debian.sh 
+  204  #!/usr/bin/env bash
+  205  systemctl restart sshd.service 
+  206  apt install xauth
+  207  apt install i3
+  208  apt install gdm
+  209  apt install gdm2
+  210  apt install gdm3
+  211  ls
+  212  su - consul 
+  213  ls
+  214  history 
+  215  æs
+  216  ls
+  217  signssh 
+  218  cat /etc/passwd
+  219  su - knowit 
+  220  cd /opt/miracle-deploy/
+  221  ls
+  222  cd inventory/
+  223  ls
+  224  cat inventory.sh 
+  225  vi bin/init-debian.sh 
+  226  cd ..
+  227  ls
+  228  vi bin/init-debian.sh 
+  229  cat inventory.sh 
+  230  cat bin/inventory.sh 
+  231  docker ps
+  232  vi bin/init-debian.sh 
+  233  init-debian.sh 
+  234  cd /opt/ 
+  235  ls
+  236  cd netbox-docker/
+  237  ls
+  238  ./build-latest.sh 
+  239  docker-compose -d up
+  240  docker-compose build .
+  241  docker-compose up -d
+  242  docker ps
+  243  ls
+  244  vi README.md 
+  245  vi /opt/miracle-deploy/bin/init-debian.sh 
+  246  vi README.md 
+  247  ip a
+  248  cd
+  249  ls
+  250  unzip tl-4.14.0-server.zip 
+  251  apt install unzip
+  252  unzip tl-4.14.0-server.zip 
+  253  cd tl-4.14.0-server/
+  254  l
+  255  ./install-server 
+  256  cd /opt/thinlinc/
+  257  ls
+  258  cd bin/
+  259  ls
+  260  ./tl-config 
+  261  ls
+  262  cd
+  263  cd /opt/
+  264  ls
+  265  cd thinlinc/
+  266  ls
+  267  cd bin/
+  268  lscd
+  269  cd
+  270  cd tl-4.14.0-server/
+  271  ls
+  272  ./install-server 
+  273  ls
+  274  cd
+  275  cd /opt/thinlinc/
+  276  ls
+  277  cd sbin/
+  278  ls
+  279  ./tl-setup 
+  280  apt install xserver-
+  281  apt install xserver-common 
+  282  apt install x11
+  283  apt install gnome
+  284  ./tl-setup 
+  285  cd /opt/thinlinc/
+  286  cd bin/
+  287  ./tl-setup 
+  288  cd ..
+  289  cd sbin/
+  290  cd ..
+  291  cd sbin/
+  292  ./tl-setup 
+  293  firefox
+  294  ip a
+  295  cd /opt/
+  296  cd netbox-docker/
+  297  vi README.md 
+  298  cd ..
+  299  cd miracle-deploy/
+  300  vi bin/init-debian.sh 
+  301  docker ps
+  302  bin/init-debian.sh 
+  303  docker ps
+  304  cd --
+  305  cd /opt/netbox-docker/
+  306  docker-compose down
+  307  vi docker-compose.yml 
+  308  vi docker-compose.override.yml 
+  309  docker-compose down
+  310  docker-compose up
+  311  docker-compose up -d
+  312  docker ps
+  313  ip a
+  314  docker ps
+  315  docker-compose stop
+  316  reboot
+  317  ls
+  318  cd /opt/miracle-deploy/
+  319  ls
+  320  bin/init-debian.sh 
+  321  vi bin/init-debian.sh 
+  322  bin/init-debian.sh 
+  323  man git
+  324  vi bin/init-debian.sh 
+  325  bin/init-debian.sh 
+  326  vi bin/init-debian.sh 
+  327  bin/init-debian.sh 
+  328  vi bin/init-debian.sh 
+  329  cd /opt/netbox-docker/
+  330  ls
+  331  vi README.md 
+  332  docker ps
+  333  cd /opt/netbox-docker/
+  334  docker-compose up -d
+  335  docker ps
+  336  docker logs 84b51e089668
+  337  cd
+  338  cd /opt/netbox-docker/
+  339  vi README.md 
+  340  docker-compose pull
+  341  vi README.md 
+  342  docker-compose down
+  343  docker-compose up -d
+  344  docker ps
+  345  docker-compose pull
+  346  docker logs 84b51e089668
+  347  docker logs6fca8e053995
+  348  docker logs 6fca8e053995
+  349  ls
+  350  docker-compose down
+  351  su - netbox
+  352  useradd -m netbox
+  353  chown netbox:netbox /opt/netbox-docker/
+  354  chown netbox:netbox -R /opt/netbox-docker/
+  355  su  - netbox 
+  356  vi /etc/group
+  357  su  - netbox 
+  358  ping vault.traeckle.com
+  359  exit
+  360  useradd -m knowit
+  361  cat /etc/ssh/sshd_config 
+  362  vi /etc/ssh/sshd_config 
+  363  systemctl restart sshd.service 
+  364  ls /etc/ssh/trusted-user-ca-keys.pem
+  365  ls /etc/ssh/ssh_host_rsa_key-cert.pub
+  366  cd
+  367  cd /opt/miracle-deploy/
+  368  ls
+  369  cd bin/
+  370  vi setupsignedssh.sh
+  371  chmod 700 setupsignedssh.sh 
+  372  ./setupsignedssh.sh 
+  373  systemctl restart sshd.service 
+  374  vi setupsignedssh.sh
+  375  ./setupsignedssh.sh 
+  376  vi updatesignedsshtrust.sh
+  377  updatesignedsshtrust.sh
+  378  chmod 755 updatesignedsshtrust.sh
+  379  updatesignedsshtrust.sh
+  380  vi /etc/passwd
+  381  which bash
+  382  vi /etc/passwd
+  383  updatesignedsshtrust.sh
+  384  vi /etc/passwd
+  385  systemctl restart sshd.service 
+  386  cd
+  387  vi /etc/ssh/sshd_config 
+  388  cat /etc/ssh/sshd_config
+  389  cat /etc/ssh/trusted-user-ca-keys.pem
+  390  ls -l /etc/ssh/trusted-user-ca-keys.pem
+  391  ls
+  392  /usr/sbin/sshd -p2222 -dddd
+  393  vi /etc/passwd
+  394  /usr/sbin/sshd -p2222 -dddd
+  395  cd /opt/
+  396  miracle-deploy/
+  397  cd miracle-deploy/
+  398  ls
+  399  cd bin/
+  400  ls
+  401  vi init-debian.sh 
+  402  vi /etc/group
+  403  ks
+  404  ls
+  405  cacd
+  406  cd
+  407  apt install gourcde
+  408  apt install gource
+  409  su - netbox 
+  410  cd /opt/netbox-docker/
+  411  ls
+  412  docker ps
+  413  docker-compose stop
+  414  vi docker-compose.
+  415  vi docker-compose.yml 
+  416  ls
+  417  vi docker-compose.override.yml
+  418  vi README.md 
+  419  cd ..
+  420  docker ps
+  421  cd netbox-docker/
+  422  cd ..
+  423  mkdiur netbox
+  424  mkdir netbox
+  425  cd netbox
+  426  ls
+  427  mkdir git
+  428  cd git/
+  429  apt search netbox
+  430  git clone https://github.com/netbox-community/netbox.git
+  431  cd netbox/
+  432  ls
+  433  cd ..
+  434  cd -..
+  435  cd ..
+  436  chown netbox:netbox netbox
+  437  chown -r  netbox:netbox netbox
+  438  chown -R  netbox:netbox netbox
+  439  su - netbox 
+  440  vi /etc/passwd
+  441  su - netbox 
+  442  ls ..
+  443  cd miracle-deploy/
+  444  ls
+  445  bin/serve_rhel_installimages.sh 
+  446  passwd knowit
+  447  bin/serve_rhel_installimages.sh 
+  448  vi bin/serve_rhel_installimages.sh 
+  449  bin/serve_rhel_installimages.sh 
+  450  vi bin/serve_rhel_installimages.sh 
+  451  bin/serve_rhel_installimages.sh 
+  452  vi bin/serve_rhel_installimages.sh 
+  453  bin/serve_rhel_installimages.sh 
+  454  vi bin/serve_rhel_installimages.sh 
+  455  mkdur /opt/images
+  456  mkdir /opt/images
+  457  bin/serve_rhel_installimages.sh 
+  458  cat bin/serve_rhel_installimages.sh 
+  459  apt install fuseiso
+  460  vi /etc/systemd/system/imageserver.service
+  461  mv /opt/miracle-deploy/bin/serve_rhel_installimages.sh /opt/miracle-deploy/bin/serve_iso_installimages.sh
+  462  vi /etc/systemd/system/imageserver.service
+  463  systemctl  restart imageserver.service 
+  464  vi /etc/systemd/system/imageserver.service
+  465  systemctl  status  imageserver.service 
+  466  sudo apt-get install python3-venv
+  467  spt-get install python3-venv
+  468  apt-get install python3-venv
+  469  systemctl  restart imageserver.service 
+  470  systemctl  status  imageserver.service 
+  471  vi /opt/miracle-deploy/bin/serve_iso_installimages.sh
+  472  systemctl  restart imageserver.service 
+  473  systemctl  status  imageserver.service 
+  474  cp /tmp/*.iso /opt/images/
+  475  bg
+  476  ls
+  477  top
+  478  cd /opt/images/
+  479  ls
+  480  ls -rlt
+  481  lls -rt
+  482  ls -rtl
+  483  ls -rlt
+  484  ls -lrt
+  485  df .
+  486  df -h .
+  487  df .
+  488  df -h .
+  489  ls -lrt
+  490  fg
+  491  bg
+  492  ls
+  493  ls -rlt
+  494  bg
+  495  systemctl  status  imageserver.service 
+  496  systemctl  restart  imageserver.service 
+  497  systemctl  stop  imageserver.service 
+  498  /opt/miracle-deploy/bin/serve_iso_installimages.sh
+  499  fg
+  500  df
+  501  vi /opt/miracle-deploy/bin/serve_iso_installimages.sh
+  502  ls /opt/images/
+  503  vi /opt/miracle-deploy/bin/serve_iso_installimages.sh
+  504  /opt/miracle-deploy/bin/serve_iso_installimages.sh
+  505  vi /opt/miracle-deploy/bin/serve_iso_installimages.sh
+  506  /opt/miracle-deploy/bin/serve_iso_installimages.sh
+  507  systemctl  start  imageserver.service 
+  508  df
+  509  bg
+  510  journalctl -xe
+  511  vi /opt/miracle-deploy/bin/serve_iso_installimages.sh
+  512  vi /etc/systemd/system/imageserver.service 
+  513  systemctl  start  imageserver.service 
+  514  systemctl daemon-reload
+  515  systemctl  start  imageserver.service 
+  516  journalctl -xe
+  517  vi /etc/ssh/sshd_config 
+  518  systemctl restart sshd
+  519  journalctl -xe
+  520  vi /etc/systemd/system/imageserver.service 
+  521  systemctl restart sshd
+  522  systemctl restart imageserver.service 
+  523  systemctl daemon-reload
+  524  systemctl restart imageserver.service 
+  525  mv /tmp/*.iso .
+  526  ls
+  527  systemctl restart imageserver.service 
+  528  cd
+  529  cd /opt/miracle-deploy/
+  530  ls
+  531  cd bin/
+  532  vi install_rhel_8.4.sh install_rhel.9.0.sh
+  533  co install_rhel_8.4.sh install_rhel.9.0.sh
+  534  cp install_rhel_8.4.sh install_rhel.9.0.sh
+  535  chmod 755 install_rhel.9.0.sh 
+  536  install_rhel.9.0.sh
+  537  apt search osinfp
+  538  apt search osinfo
+  539  apt install -y install_rhel.9.0.sh
+  540  apt install -y libosinfo-1.0-0 
+  541  systemctl restart imageserver.service 
+  542  apt install -y libosinfo-1.0-0
+  543  install_rhel.9.0.sh
+  544  VIRTINSTALL_OSINFO_DISABLE_REQUIRE=1.
+  545  export VIRTINSTALL_OSINFO_DISABLE_REQUIRE=1
+  546  install_rhel.9.0.sh
+  547  apt search osinfo
+  548  apt install osinfo-db
+  549  apt install osinfo-db-tools 
+  550  install_rhel.9.0.sh
+  551  sudo apt update
+  552  apt update
+  553  apt dist-upgrade 
+  554  install_rhel.9.0.sh
+  555  cat install_rhel.9.0.sh 
+  556  virt-install --name demo
+  557  virt-install --name demo --osinfo detect=on
+  558  apt search libosinfo
+  559  apt install libosinfo-bin
+  560  virt-install --name demo --osinfo detect=on
+  561  reboot
+  562  ls
+  563  virt-install --name demo --osinfo detect=on
+  564  virt-install --version
+  565  cat /etc/debian_version 
+  566  history 
+  567  history  >  /opt/miracle-deploy/history.log

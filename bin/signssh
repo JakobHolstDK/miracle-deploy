@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+rm ~/.ssh/known_hosts >/dev/null 2>&1
+vault read -field=public_key ssh-host-signer/config/ca 2>/dev/null | sed "s/...$/\n/"|tr -d '"' |xargs -i{}  echo "@cert-authority *.traeckle.com  {} " > ~/.ssh/known_hosts
+rm ~/.ssh/disposeable 2>/dev/null
+ssh-keygen -b 2048 -t rsa -f  ~/.ssh/disposeable -q -N "" >/dev/null 2>&1
+chmod 600 ~/.ssh/disposeable >/dev/null 2>&1
+vault write -field=signed_key ssh-client-signer/sign/admin  public_key=@$HOME/.ssh/disposeable.pub > ~/.ssh/signed-cert.pub 2>/dev/null
+chmod 600 ~/.ssh/signed-cert.pub 2>/dev/null
+sed -i "s/...$//" ~/.ssh/signed-cert.pub 2>/dev/null
+sed -i 's/^"//' ~/.ssh/signed-cert.pub 2>/dev/null
+
