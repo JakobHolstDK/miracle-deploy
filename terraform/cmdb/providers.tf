@@ -1,0 +1,3 @@
+provider "netbox" {
+  # Configuration options
+}
