@@ -1,4 +1,6 @@
- ca.info
- cacert.pem
- cakey.pem
+ca.info
+cacert.pem
+cakey.pem
+terraform.tfvars
+venv
 
