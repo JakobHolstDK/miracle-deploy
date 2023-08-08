@@ -3,4 +3,4 @@ cacert.pem
 cakey.pem
 terraform.tfvars
 venv
-
+terraform-provider-netbox
