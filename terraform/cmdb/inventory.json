@@ -1,0 +1,40 @@
+{
+  "all": {
+    "hosts": {
+      "overcloud01": null,
+      "overcloud02": null,
+      "overcloud03": null,
+      "undercloud01": null,
+      "undercloud02": null,
+      "undercloud03": null
+    }
+  },
+  "_meta": {
+    "hostvars": {
+      "overcloud01": {
+        "ip_address": "",
+        "guest_os": ""
+      },
+      "overcloud02": {
+        "ip_address": "",
+        "guest_os": ""
+      },
+      "overcloud03": {
+        "ip_address": "",
+        "guest_os": ""
+      },
+      "undercloud01": {
+        "ip_address": "",
+        "guest_os": ""
+      },
+      "undercloud02": {
+        "ip_address": "",
+        "guest_os": ""
+      },
+      "undercloud03": {
+        "ip_address": "",
+        "guest_os": ""
+      }
+    }
+  }
+}
