@@ -10,7 +10,7 @@ resource "netbox_virtual_machine" "undercloud" {
   tenant_id    = netbox_tenant.knowit.id
   local_context_data = jsonencode({
     "operating system" = "RHEL9"
-    "rhel_org" = 6207854
+    "rhel_org" = 6696143
     "activation_key" = "openstack"
   })
 }
@@ -27,7 +27,7 @@ resource "netbox_virtual_machine" "overcloud" {
   tenant_id    = netbox_tenant.knowit.id
   local_context_data = jsonencode({
     "operating system" = "RHEL9"
-    "rhel_org" = 6207854
+    "rhel_org" = 6696143
     "activation_key" = "openstack"
   })
 }
