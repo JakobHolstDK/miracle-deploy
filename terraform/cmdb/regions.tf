@@ -1,4 +1,4 @@
-resource "netbox_region" "test" {
-  name        = "test"
-  description = "test description"
+resource "netbox_region" "germany" {
+  name        = "germany"
+  description = "germany"
 }

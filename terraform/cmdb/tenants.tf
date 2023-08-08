@@ -1,3 +1,3 @@
-resource "netbox_tenant" "customer_a" {
-  name = "Customer A"
+resource "netbox_tenant" "knowit" {
+  name = "knowit A/S"
 }

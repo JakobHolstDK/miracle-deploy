@@ -1,34 +1,33 @@
-// Assumes vmw-cluster-01 exists in Netbox
-data "netbox_cluster" "vmw_cluster_01" {
-  name = "vmw-cluster-01"
-}
-
-resource "netbox_virtual_machine" "base_vm" {
-  cluster_id = data.netbox_cluster.vmw_cluster_01.id
-  name       = "myvm-1"
-}
-resource "netbox_virtual_machine" "basic_vm" {
-  cluster_id   = data.netbox_cluster.vmw_cluster_01.id
-  name         = "myvm-2"
+resource "netbox_virtual_machine" "undercloud" {
+  count = 3
+  cluster_id   = netbox_cluster.openstack[count.index].id
+  name         = "undercloud${format("%02d", count.index + 1)}"
+  tags         = [ "RedHat", "undercloud", "Backup" ]
   disk_size_gb = 40
   memory_mb    = 4092
   vcpus        = "2"
-}
-// Assumes customer-a exists as a tenant in Netbox
-data "netbox_tenant" "customer_a" {
-  name = "Customer A"
-}
-
-resource "netbox_virtual_machine" "full_vm" {
-  cluster_id   = data.netbox_cluster.vmw_cluster_01.id
-  name         = "myvm-3"
-  disk_size_gb = 40
-  memory_mb    = 4092
-  vcpus        = "2"
-  role_id      = 31 // This corresponds to the Netbox ID for a given role
-  tenant_id    = data.netbox_tenant.customer_a.id
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
   local_context_data = jsonencode({
-    "setting_a" = "Some Setting"
-    "setting_b" = 42
+    "operating system" = "RHEL9"
+    "rhel_org" = 6207854
+    "activation_key" = "openstack"
+  })
+}
+
+resource "netbox_virtual_machine" "overcloud" {
+  count = 3
+  cluster_id   = netbox_cluster.openstack[count.index].id
+  name         = "overcloud${format("%02d", count.index + 1)}"
+  tags         = [ "RedHat", "overcloud", "Backup" ]
+  disk_size_gb = 1000
+  memory_mb    = 48000
+  vcpus        = "8"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode({
+    "operating system" = "RHEL9"
+    "rhel_org" = 6207854
+    "activation_key" = "openstack"
   })
 }

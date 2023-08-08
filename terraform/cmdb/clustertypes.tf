@@ -1,3 +1,3 @@
-resource "netbox_cluster_type" "vmw_vsphere" {
-  name = "VMware vSphere 6"
+resource "netbox_cluster_type" "kvm" {
+  name = "Native linux libvirt kvm"
 }

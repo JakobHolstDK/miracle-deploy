@@ -1,4 +1,4 @@
-resource "netbox_cluster_group" "grp1" {
-  description = "West Datacenter Cluster"
-  name        = "grp1"
+resource "netbox_cluster_group" "openstack" {
+  description = "Servers used for openstack demo"
+  name        = "openstack"
 }
