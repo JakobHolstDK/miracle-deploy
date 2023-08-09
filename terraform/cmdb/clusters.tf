@@ -1,7 +1,7 @@
 variable "cluster_names" {
   description = "Create clusters with theese names"
   type        = list(string)
-  default     = ["openstack01", "openstack02", "openstack03"]
+  default     = ["openstack01.openknowit.com", "openstack02.openknowit.com", "openstack03.openknowit.com"]
 }
 
 

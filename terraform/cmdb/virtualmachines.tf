@@ -4,7 +4,7 @@ resource "netbox_virtual_machine" "undercloud" {
   name         = "undercloud${format("%02d", count.index + 1)}"
   tags         = [ "RedHat", "undercloud", "Backup" ]
   disk_size_gb = 40
-  memory_mb    = 4092
+  memory_mb    = 8192
   vcpus        = "2"
   role_id      = netbox_device_role.server.id
   tenant_id    = netbox_tenant.knowit.id
@@ -20,7 +20,7 @@ resource "netbox_virtual_machine" "overcloud" {
   cluster_id   = netbox_cluster.openstack[count.index].id
   name         = "overcloud${format("%02d", count.index + 1)}"
   tags         = [ "RedHat", "overcloud", "Backup" ]
-  disk_size_gb = 1000
+  disk_size_gb = 300
   memory_mb    = 48000
   vcpus        = "8"
   role_id      = netbox_device_role.server.id
