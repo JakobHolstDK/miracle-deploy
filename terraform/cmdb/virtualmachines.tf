@@ -20,7 +20,7 @@ resource "netbox_virtual_machine" "overcloud" {
   cluster_id   = netbox_cluster.openstack[count.index].id
   name         = "overcloud${format("%02d", count.index + 1)}"
   tags         = [ "RedHat", "overcloud", "Backup" ]
-  disk_size_gb = 300
+  disk_size_gb = 100
   memory_mb    = 48000
   vcpus        = "8"
   role_id      = netbox_device_role.server.id

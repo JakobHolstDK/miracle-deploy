@@ -2,7 +2,9 @@
 
 
 export FQDN="${HOSTNAME}.openknowit.com"
-DEPLOY=$(kalm_netbox netboxdata | jq '.virtual_machines[] | select (.cluster == env.FQDN)')
+export KALM_SILENCE="true"
+
+DEPLOY=$(kalm_netbox netboxdata |grep -v  "initialize end" | jq '.virtual_machines[] | select (.cluster == env.FQDN)')
 
 virsh list >/tmp/active.list
 virsh list --inactive >/tmp/inactive.list
