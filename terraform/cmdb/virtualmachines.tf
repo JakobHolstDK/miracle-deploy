@@ -1,3 +1,40 @@
+resource "netbox_virtual_machine" "ansible" {
+  count = 3
+  cluster_id   = netbox_cluster.openstack[count.index].id
+  name         = "ansible${format("%02d", count.index + 1)}"
+  tags         = [ "RedHat", "undercloud", "Backup" ]
+  disk_size_gb = 40
+  memory_mb    = 8192
+  vcpus        = "2"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode({
+    "operating system" = "RHEL9"
+    "rhel_org" = 6696143
+    "activation_key" = "openstack"
+  })
+}
+
+resource "netbox_virtual_machine" "kalm" {
+  count = 3
+  cluster_id   = netbox_cluster.openstack[count.index].id
+  name         = "kalm${format("%02d", count.index + 1)}"
+  tags         = [ "RedHat", "undercloud", "Backup" ]
+  disk_size_gb = 40
+  memory_mb    = 8192
+  vcpus        = "2"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode({
+    "operating system" = "RHEL9"
+    "rhel_org" = 6696143
+    "activation_key" = "openstack"
+  })
+}
+
+
+
+
 resource "netbox_virtual_machine" "undercloud" {
   count = 3
   cluster_id   = netbox_cluster.openstack[count.index].id
