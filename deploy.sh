@@ -28,8 +28,10 @@ do
 			DISK=$(cat /tmp/server.json | jq .disk_gb -r )
 			CPU=$(cat /tmp/server.json | jq .cpu -r )
 			MEM=$(cat /tmp/server.json | jq .memory_mb -r )
+			REL=$(cat /tmp/server.json | jq .release -r )
+
 			virt-install --name $name \
-                                     --location http://${HOSTNAME}:8000/rhel-9.2\
+                                     --location http://${HOSTNAME}:8000/rhel-9.0\
                                      --osinfo detect=on \
                                      --vcpus $CPU \
                                      --memory $MEM \
