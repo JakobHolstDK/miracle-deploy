@@ -42,6 +42,23 @@ resource "netbox_tag" "SLA_preproduction"   {
 name      = "PreProduction"     
 color_hex = "ff93ff" 
 }
+resource "netbox_tag" "kalm"   { 
+name      = "kalm"     
+color_hex = "ff93ff" 
+}
+resource "netbox_tag" "satellite"   { 
+name      = "satellite"     
+color_hex = "ff9322" 
+}
+resource "netbox_tag" "nfs"   { 
+name      = "nfs"     
+color_hex = "ff9322" 
+}
+resource "netbox_tag" "openstack"   { 
+name      = "openstack"     
+color_hex = "ff9311" 
+}
+
 
 resource "netbox_tag" "SLA_qa"              { 
 name      = "Quality assurance" 
