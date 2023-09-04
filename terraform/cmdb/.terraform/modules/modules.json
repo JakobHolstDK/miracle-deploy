@@ -1,1 +1,1 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"netbox_config","Source":"./modules/netbox","Dir":""}]}
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"my_virtual_machine","Source":"./modules/virtualmachine","Dir":"modules/virtualmachine"},{"Key":"netbox_config","Source":"./modules/netbox","Dir":""},{"Key":"virtualmachine","Source":"./modules/virtualmachine","Dir":"modules/virtualmachine"},{"Key":"virtualmachine.my_virtual_machine","Source":"./module","Dir":""}]}
