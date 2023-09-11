@@ -1,0 +1,8 @@
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - name: create some file
+    template: src=ks.cfg.j2 dest=ks.cfg
+    delegate_to: localhost
+
+
