@@ -28,12 +28,15 @@ do
 			DISK=$(cat /tmp/server.json | jq .disk_gb -r )
 			CPU=$(cat /tmp/server.json | jq .cpu -r )
 			MEM=$(cat /tmp/server.json | jq .memory_mb -r )
+			cat /tmp/server.json
 			REL=$(cat /tmp/server.json | jq .local_context_data.operating_system -r )
+			REL="9.2"
 			MYREL=$(ls -1 /var/lib/libvirt/images/iso | grep $REL |sort -n |tail -1 | awk -F'.iso' '{ print $1 }')
+			
 			ansible-playbook create-ksfile.yml -e rel=${MYREL}
 			echo "create server $name"
 			virt-install --name $name \
-                                     --location http://${HOSTNAME}:8000/${MYREL}\
+                                     --location http://${FQDN}:8000/${MYREL}\
                                      --osinfo detect=on \
                                      --vcpus $CPU \
                                      --memory $MEM \
