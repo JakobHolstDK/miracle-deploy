@@ -29,10 +29,9 @@ do
 			CPU=$(cat /tmp/server.json | jq .cpu -r )
 			MEM=$(cat /tmp/server.json | jq .memory_mb -r )
 			REL=$(cat /tmp/server.json | jq .local_context_data.operating_system -r )
-			clear
-			cat /tmp/server.json
-			echo $REL
 			MYREL=$(ls -1 /var/lib/libvirt/images/iso | grep $REL |sort -n |tail -1 | awk -F'.iso' '{ print $1 }')
+			ansible-playbook create-ksfile.yml -e rel=${MYREL}
+			echo "create server $name"
 			virt-install --name $name \
                                      --location http://${HOSTNAME}:8000/${MYREL}\
                                      --osinfo detect=on \
@@ -44,6 +43,5 @@ do
 		fi
 	fi
 	echo $name
-	kalm_dns libvirt
 
 done

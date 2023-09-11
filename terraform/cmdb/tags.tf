@@ -58,6 +58,14 @@ resource "netbox_tag" "openstack"   {
 name      = "openstack"     
 color_hex = "ff9311" 
 }
+resource "netbox_tag" "openshiftmaster"   { 
+name      = "openshiftmaster"     
+color_hex = "ff4311" 
+}
+resource "netbox_tag" "openshiftworker"   { 
+name      = "openshiftworker"     
+color_hex = "ff4316" 
+}
 
 
 resource "netbox_tag" "SLA_qa"              { 
