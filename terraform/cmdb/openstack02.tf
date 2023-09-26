@@ -1,8 +1,8 @@
 resource "netbox_virtual_machine" "openshiftmaster" {
   count = 3
-  cluster_id   = netbox_cluster.openstack[0].id
+  cluster_id   = netbox_cluster.openstack[1].id
   name         = "openshiftmaster${format("%02d", count.index + 1)}"
-  tags         = [ "RedHat", "openshiftmaster", "Backup" ]
+  tags         = [ "os_redhat", "role_backup" ]
   disk_size_gb = 100
   memory_mb    = 8192
   vcpus        = "2"
@@ -17,9 +17,9 @@ resource "netbox_virtual_machine" "openshiftmaster" {
 
 resource "netbox_virtual_machine" "openshiftworker" {
   count = 3
-  cluster_id   = netbox_cluster.openstack[0].id
+  cluster_id   = netbox_cluster.openstack[1].id
   name         = "openshiftworker${format("%02d", count.index + 1)}"
-  tags         = [ "RedHat", "openshiftworker", "Backup" ]
+  tags         = [ "os_redhat", "role_backup" ]
   disk_size_gb = 100
   memory_mb    = 8192
   vcpus        = "8"
