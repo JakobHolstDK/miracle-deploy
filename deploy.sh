@@ -41,7 +41,7 @@ do
                                      --vcpus $CPU \
                                      --memory $MEM \
                                      --initrd-inject ks.cfg \
-                                     --extra-args="inst.ks=file:/ks.cfg console=tty0 console=ttyS0,115200n8" \
+                                     --extra-args="inst.ks=http://openstack03.openknowit.com:8000/ks.cfg  console=tty0 console=ttyS0,115200n8" \
                                      --disk size=$DISK,sparse=true
 		fi
 	fi

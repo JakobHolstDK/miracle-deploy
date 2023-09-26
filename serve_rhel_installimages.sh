@@ -13,6 +13,7 @@ do
 	mkdir -p /tmp/serve/$NAME > /dev/null 
 	fuseiso  /var/lib/libvirt/images/iso/$ISO /tmp/serve/$NAME
 done
+cp ks.cfg /tmp/serve
 cd rhel && python3 -m http.server --directory /tmp/serve
 
 
