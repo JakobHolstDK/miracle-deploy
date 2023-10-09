@@ -12,3 +12,10 @@ resource "netbox_cluster" "openstack" {
   name             = var.cluster_names[count.index]
   cluster_group_id = netbox_cluster_group.openstack.id
 }
+
+
+resource "netbox_cluster" "dashrf" {
+  cluster_type_id  = netbox_cluster_type.kvm.id
+  name             = "dashrf.openknowit.com"
+  cluster_group_id = netbox_cluster_group.openstack.id
+}
