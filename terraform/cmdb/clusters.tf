@@ -14,6 +14,11 @@ resource "netbox_cluster" "openstack" {
 }
 
 
+resource "netbox_cluster" "egon" {
+  cluster_type_id  = netbox_cluster_type.kvm.id
+  name             = "egon.openknowit.com"
+  cluster_group_id = netbox_cluster_group.jaho.id
+}
 resource "netbox_cluster" "dashrf" {
   cluster_type_id  = netbox_cluster_type.kvm.id
   name             = "dashrf.openknowit.com"
