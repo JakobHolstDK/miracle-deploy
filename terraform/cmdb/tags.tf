@@ -1,4 +1,8 @@
 
+resource "netbox_tag" "role_wireguard"             { 
+name      = "role_wireguard"            
+color_hex =  var.color_map["Blue"] 
+}
 resource "netbox_tag" "role_backup"             { 
 name      = "role_backup"            
 color_hex =  var.color_map["Cyan"] 

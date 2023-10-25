@@ -13,6 +13,11 @@ resource "netbox_cluster" "openstack" {
   cluster_group_id = netbox_cluster_group.openstack.id
 }
 
+resource "netbox_cluster" "ssh" {
+  cluster_type_id  = netbox_cluster_type.kvm.id
+  name             = "ssh.openknowit.com"
+  cluster_group_id = netbox_cluster_group.jaho.id
+}
 
 resource "netbox_cluster" "egon" {
   cluster_type_id  = netbox_cluster_type.kvm.id
