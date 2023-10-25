@@ -34,3 +34,81 @@ resource "netbox_virtual_machine" "perconatest" {
 }
 
 
+resource "netbox_virtual_machine" "tltest" {
+  count = 3
+  cluster_id   = netbox_cluster.openstack[1].id
+  name         = "tltest${format("%02d", count.index + 1)}"
+  tags         = [ "os_redhat",  "role_backup" ]
+  disk_size_gb = 50
+  memory_mb    = 3500
+  vcpus        = "1"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode({
+    "operating_system" = "rhel-9.2"
+    "rhel_org" = 6207854
+    "activation_key" = "Faceted-Oil-Scion6"
+  })
+}
+
+
+
+
+
+resource "netbox_virtual_machine" "dashapp" {
+  count = 1
+  cluster_id   = netbox_cluster.openstack[1].id
+  name         = "dashapp${format("%02d", count.index + 1)}"
+  tags         = [ "os_redhat",  "role_backup" ]
+  disk_size_gb = 50
+  memory_mb    = 3500
+  vcpus        = "1"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode({
+    "operating_system" = "rhel-9.2"
+    "rhel_org" = 6207854
+    "activation_key" = "Faceted-Oil-Scion6"
+  })
+}
+
+
+
+resource "netbox_virtual_machine" "dasweb" {
+  count = 3
+  cluster_id   = netbox_cluster.openstack[1].id
+  name         = "dashweb${format("%02d", count.index + 1)}"
+  tags         = [ "os_redhat",  "role_backup" ]
+  disk_size_gb = 50
+  memory_mb    = 3500
+  vcpus        = "1"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode({
+    "operating_system" = "rhel-9.2"
+    "rhel_org" = 6207854
+    "activation_key" = "Faceted-Oil-Scion6"
+  })
+}
+
+
+
+resource "netbox_virtual_machine" "dashdb" {
+  count = 1
+  cluster_id   = netbox_cluster.openstack[1].id
+  name         = "dashdb${format("%02d", count.index + 1)}"
+  tags         = [ "os_redhat",  "role_backup" ]
+  disk_size_gb = 200
+  memory_mb    = 3500
+  vcpus        = "1"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode({
+    "operating_system" = "rhel-9.2"
+    "rhel_org" = 6207854
+    "activation_key" = "Faceted-Oil-Scion6"
+  })
+}
+
+
+
