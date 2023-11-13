@@ -29,8 +29,8 @@ do
 			CPU=$(cat /tmp/server.json | jq .cpu -r )
 			MEM=$(cat /tmp/server.json | jq .memory_mb -r )
 			cat /tmp/server.json
-			REL=$(cat /tmp/server.json | jq .local_context_data.operating_system -r )
-			REL="9.2"
+			REL=$(cat /tmp/server.json | jq .local_context_data.os.operating_system -r )
+			echo $REL
 			MYREL=$(ls -1 /var/lib/libvirt/images/iso | grep $REL |sort -n |tail -1 | awk -F'.iso' '{ print $1 }')
 			
 			ansible-playbook create-ksfile.yml -e rel=${MYREL}
