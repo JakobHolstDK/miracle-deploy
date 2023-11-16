@@ -1,0 +1,1000 @@
+ 1004  vi deploy.sh 
+ 1005  ./deploy.sh 
+ 1006  vi deploy.sh 
+ 1007  ./deploy.sh 
+ 1008  vi deploy.sh 
+ 1009  ./deploy.sh 
+ 1010  exut
+ 1011  exit
+ 1012  cd miracle-deploy
+ 1013  cd terraform/cmdb/
+ 1014  ls
+ 1015  cat openstack0
+ 1016  cat openstack01
+ 1017  cat openstack01.tf 
+ 1018  '
+ 1019  exit
+ 1020  env | grep KALM
+ 1021  exit
+ 1022  ls
+ 1023  cd miracle-deploy
+ 1024  source venv/bin/activate
+ 1025  ./deploy.sh 
+ 1026  vi deploy.sh 
+ 1027  ./deploy.sh 
+ 1028  vi deploy.sh 
+ 1029  vi ks.cfg 
+ 1030  rm .ks.cfg.swp
+ 1031  vi ks.cfg.j2 
+ 1032  cp ks.cfg ks.cfg.j2
+ 1033  vi ks.cfg.j2 
+ 1034  vi create-ksfile.yml
+ 1035  ansible-playbook create-ksfile.yml 
+ 1036  vi create-ksfile.yml
+ 1037  ansible-playbook create-ksfile.yml 
+ 1038  ansible-playbook create-ksfile.yml -e rel="8.8"
+ 1039  cat ks.cfg
+ 1040  ansible-playbook create-ksfile.yml -e rel="8.8"
+ 1041  cat ks.cfg
+ 1042  cat ks.cfg|more
+ 1043  vi deploy.sh 
+ 1044  ./deploy.sh 
+ 1045  cat ks.cfg
+ 1046  cat ks.cfg|head
+ 1047  vi deploy.sh 
+ 1048  vi ks.cfg.j2 
+ 1049  vi deploy.sh 
+ 1050  vi ks.cfg.j2 
+ 1051  ./deploy.sh 
+ 1052  exit
+ 1053  ls
+ 1054  cd miracle-deploy
+ 1055  ls
+ 1056  tmux a
+ 1057  source venv/bin/activate
+ 1058  kalm_dns 
+ 1059  kalm_dns libvirt
+ 1060  ping kalm01.openknowit.com
+ 1061  virsh help
+ 1062  virsh network
+ 1063  virsh net
+ 1064  virsh net-list
+ 1065  virsh net-list --all
+ 1066  virsh net-list 
+ 1067  virsh net-list  --help
+ 1068  virsh net-list  --name
+ 1069  virsh net-dhcp-leases
+ 1070  virsh net-dhcp-leases default
+ 1071  virsh net-dhcp-leases default --help
+ 1072  '
+ 1073  virsh net-dhcp-leases default 01:52:54:00:a6:c9:e1
+ 1074  virsh net-dhcp-leases default "01:52:54:00:a6:c9:e1"
+ 1075  virsh net-dhcp-leases default "01525400a6c9e1"
+ 1076  virsh net-list  --name
+ 1077  virsh net-dhcp-leases default 
+ 1078  virsh net-dhcp-leases
+ 1079  virsh net-dhcp-leases --help
+ 1080  virsh net-dhcp-leases --network default 
+ 1081  virsh net-dhcp-leases --network default  --mac 01:52:54:00:a3:3b:31
+ 1082  virsh net-dhcp-leases --network default  --mac "01:52:54:00:a3:3b:31"
+ 1083  virsh net-dhcp-leases --network default 
+ 1084  pip install --upgrade kalm
+ 1085  kalm_dns libvirt
+ 1086  pip install --upgrade kalm
+ 1087  kalm_dns libvirt
+ 1088  pip install --upgrade kalm
+ 1089  kalm_dns libvirt
+ 1090  pip install --upgrade kalm
+ 1091  kalm_dns libvirt
+ 1092  vi terraform/cmdb/
+ 1093  vi terraform/cmdb/openstack0
+ 1094  vi terraform/cmdb/openstack01.tf 
+ 1095  cd terraform/
+ 1096  cd cmdb/
+ 1097  terraform apply
+ 1098  virsh list
+ 1099  cd ..
+ 1100  ./deploy.sh 
+ 1101  cd terraform/
+ 1102  cd cd
+ 1103  cd cmdb/
+ 1104  cp openstack01.tf openstack03.tf
+ 1105  vi openstack03.tf 
+ 1106  terraform apply
+ 1107  exit
+ 1108  cd terraform/
+ 1109  cd cmdb/
+ 1110  git pull
+ 1111  cp openstack01.tf openstack02.tf 
+ 1112  vi openstack02.tf 
+ 1113  terraform apply
+ 1114  vi tags.tf 
+ 1115  terraform apply
+ 1116  vi tags.tf 
+ 1117  terraform apply
+ 1118  vi tags.tf 
+ 1119  vi openstack02.tf 
+ 1120  vi tags.tf 
+ 1121  vi openstack02.tf 
+ 1122  terraform apply
+ 1123  vi openstack02.tf 
+ 1124  vi tags.tf 
+ 1125  mv openstack02.tf  openstack02.tf.dis
+ 1126  terraform apply
+ 1127  mv openstack02.tf.dis  openstack02.tf
+ 1128  terraform apply
+ 1129  vi tags.tf 
+ 1130  terraform apply
+ 1131  vi openstack02.tf 
+ 1132  terraform apply
+ 1133  exit
+ 1134  cd miracle-deploy
+ 1135  git commit -a -m "demo"
+ 1136  git push
+ 1137  ls -lrt
+ 1138  git push
+ 1139  exit
+ 1140  ls
+ 1141  cd miracle-deploy
+ 1142  ls
+ 1143  ./deploy.sh 
+ 1144  cd miracle-deploy
+ 1145  source venv/bin/activate
+ 1146  kalm_dns 
+ 1147  pip install --upgrade kalm
+ 1148  kalm_dns 
+ 1149  kalm_dns libvirt_leases
+ 1150  pip install --upgrade kalm
+ 1151  kalm_dns libvirt_leases
+ 1152  pip install --upgrade kalm
+ 1153  kalm_dns libvirt_leases
+ 1154  pip install --upgrade kalm
+ 1155  kalm_dns libvirt_leases
+ 1156  cd miracle-deploy
+ 1157  source venv/bin/activate
+ 1158  pip install --upgrade kalm
+ 1159  kalm_dns libvirt_leases
+ 1160  kalm_dns libvirt
+ 1161  pip install --upgrade kalm
+ 1162  kalm_dns libvirt
+ 1163  pip install --upgrade kalm
+ 1164  kalm_dns libvirt
+ 1165  pip install --upgrade kalm
+ 1166  kalm_dns libvirt
+ 1167  cd openknowit_kalm/
+ 1168  git pull
+ 1169  source venv/bin/activate
+ 1170  pip install .
+ 1171  kalm_dns libvirt
+ 1172  pop install netifaces
+ 1173  pip install netifaces
+ 1174  pop install netifaces
+ 1175  kalm_dns libvirt
+ 1176  pop install paramiko
+ 1177  pip install paramiko
+ 1178  pop install paramiko
+ 1179  kalm_dns libvirt
+ 1180  pip install paramiko
+ 1181  pip install .
+ 1182  kalm_dns libvirt
+ 1183  pip install .
+ 1184  git pull
+ 1185  pip install .
+ 1186  git pull
+ 1187  kalm_dns libvirt
+ 1188  git pull
+ 1189  pip install .
+ 1190  kalm_dns libvirt
+ 1191  git pull
+ 1192  kalm_dns libvirt
+ 1193  pip install .
+ 1194  kalm_dns libvirt
+ 1195  git pull
+ 1196  pip install .
+ 1197  kalm_dns libvirt
+ 1198  pip install .
+ 1199  git pull
+ 1200  pip install .
+ 1201  kalm_dns libvirt
+ 1202  pip install .
+ 1203  git pull
+ 1204  pip install .
+ 1205  kalm_dns libvirt
+ 1206  pip install .
+ 1207  git pull
+ 1208  pip install .
+ 1209  kalm_dns libvirt
+ 1210  git pull
+ 1211  pip install .
+ 1212  kalm_dns libvirt
+ 1213  git pull
+ 1214  pip install .
+ 1215  kalm_dns libvirt
+ 1216  git pull
+ 1217  pip install .
+ 1218  kalm_dns libvirt
+ 1219  pip install .
+ 1220  git pull
+ 1221  pip install .
+ 1222  kalm_dns libvirt
+ 1223  git pull
+ 1224  pip install --upgrade kalm
+ 1225  kalm_netbox 
+ 1226  kalm_netbox ssh_config
+ 1227  env |grep KALM
+ 1228  env |grep NETBOX_API_URL
+ 1229  env |grep NETBO
+ 1230  tar cvf homeknowit.tar .
+ 1231  cd miracle-deploy
+ 1232  ls
+ 1233  git pull
+ 1234  cd terraform/cmdb/
+ 1235  cp openstack01.tf openstack03.tf 
+ 1236  vi openstack03.tf 
+ 1237  vi vm_template.templ
+ 1238  vi openstack03.tf 
+ 1239  cp openstack03.tf serverlist
+ 1240  vi openstack03.tf serverlist 
+ 1241  vi openstack03.tf
+ 1242  mv openstack03.tf serverlist
+ 1243  vi openstack03.tf
+ 1244  vi serverlist 
+ 1245  ls -rlt
+ 1246  cat vm_template.templ 
+ 1247  ls -rlt
+ 1248  vi openstack03.tf
+ 1249  vi serverlist 
+ 1250  vi tags.tf 
+ 1251  vi taglist
+ 1252  cp tags.tf tagtemplate.templ
+ 1253  vi tagtemplate.templ 
+ 1254  vi variables.tf 
+ 1255  vi tagtemplate.templ 
+ 1256  vi taglist 
+ 1257  cat variables.tf 
+ 1258  cat variables.tf |head
+ 1259  cat variables.tf |head -30
+ 1260  vi taglist 
+ 1261  cat tags.tf 
+ 1262  cat tags.tf |grep name
+ 1263  cat tags.tf |grep name | awk '"' '{ print $2 }'
+ 1264  cat tags.tf |grep name | awk ' ' '{ print $2 }'
+ 1265  cat tags.tf |grep name 
+ 1266  cat tags.tf |grep name  |awk '=' '{ print $2 }'
+ 1267  cat tags.tf |grep name  |awk -F '=' '{ print $2 }'
+ 1268  cat tags.tf |grep name  |awk -F '=' '{ print $2 }' |tr -d '"'
+ 1269  cat tags.tf |grep name  |awk -F '=' '{ print $2 }' |tr -d '"' |sort >> taglist 
+ 1270  vi taglist 
+ 1271  cat variables.tf  |grep RE
+ 1272  cat variables.tf  |grep Re
+ 1273  vi taglist 
+ 1274  cat variables.tf  |grep -i red
+ 1275  cat variables.tf  |grep -i Blu
+ 1276  cat variables.tf  |grep -i red
+ 1277  vi taglist 
+ 1278  vi createtags.sh
+ 1279  chmod 700 taglist
+ 1280  chmod 600 taglist
+ 1281  chmod 700 createtags.sh 
+ 1282  ./createtags.sh 
+ 1283  vi createtags.sh
+ 1284  ./createtags.sh 
+ 1285  vi createtags.sh
+ 1286  ./createtags.sh 
+ 1287  vi createtags.sh
+ 1288  ./createtags.sh 
+ 1289  vi createtags.sh
+ 1290  ./createtags.sh 
+ 1291  vi createtags.sh
+ 1292  ./createtags.sh 
+ 1293  vi createtags.sh
+ 1294  ./createtags.sh 
+ 1295  vi tags.tmp
+ 1296  cat tags.tmp 
+ 1297  cat tags.tmp |sort -u
+ 1298  vi variables.tf 
+ 1299  vi tagtemplate.templ 
+ 1300  ./createtags.sh 
+ 1301  vi tagtemplate.templ 
+ 1302  vi createtags.sh 
+ 1303  ./createtags.sh 
+ 1304  vi createtags.sh 
+ 1305  cat tags.tf 
+ 1306  mv tags.tf  tags.tf.org
+ 1307  vi createtags.sh 
+ 1308  ./createtags.sh 
+ 1309  vi createtags.sh 
+ 1310  ./createtags.sh 
+ 1311  terraform plan
+ 1312  vi variables.tf 
+ 1313  vi tagtemplate.templ 
+ 1314  vi variables.tf 
+ 1315  vi tagtemplate.templ 
+ 1316  ./createtags.sh 
+ 1317  terraform plan
+ 1318  vi tagtemplate.templ 
+ 1319  vi variables.tf 
+ 1320  vi tagtemplate.templ 
+ 1321  ./createtags.sh 
+ 1322  terraform plan
+ 1323  vi taglist 
+ 1324  terraform plan
+ 1325  ./createtags.sh 
+ 1326  terraform plan
+ 1327  terraform apply
+ 1328  cat vm_template.templ 
+ 1329  cd proje
+ 1330  ls
+ 1331  cd miracle-deploy
+ 1332  ls -lrt
+ 1333  ./deploy.sh 
+ 1334  pip install --upgrade kalm
+ 1335  kalm_dns 
+ 1336  kalm_dns libvirt
+ 1337  kalm_netbox 
+ 1338  kalm_netbox roles
+ 1339  kalm_netbox roles |jq .
+ 1340  kalm_netbox ansible_inventory
+ 1341  kalm_netbox inventory_upload
+ 1342  cd inventory/
+ 1343  ls
+ 1344  cd inventory/
+ 1345  cd 
+ 1346  mkdir project
+ 1347  ls
+ 1348  cd project/
+ 1349  ls
+ 1350  cd project/
+ 1351  ls
+ 1352  cd 
+ 1353  ls
+ 1354  cd miracle-deploy
+ 1355  cd terraform/
+ 1356  ls
+ 1357  cd cmdb/
+ 1358  ls
+ 1359  ks -rlt
+ 1360  ls -rlt
+ 1361  cat createtags.sh 
+ 1362  cat variables.tf 
+ 1363  ls -rtl
+ 1364  vast taglist 
+ 1365  cat taglist 
+ 1366  cat serverlist 
+ 1367  ls -rtl
+ 1368  cat tagtemplate.templ
+ 1369  cat createtags.sh 
+ 1370  ls -rlt
+ 1371  cat vm_template.templ 
+ 1372  cat clusters.tf 
+ 1373  vi cluster_template.templ
+ 1374  cd miracle-deploy
+ 1375  git pull
+ 1376  ls -rtl
+ 1377  cd terraform/
+ 1378  ls
+ 1379  cd cmdb/
+ 1380  ls
+ 1381  cp openstack02.tf openstack03.tf
+ 1382  vi openstack03.tf 
+ 1383  terraform  apply
+ 1384  vi openstack03.tf 
+ 1385  terraform  apply
+ 1386  vi openstack03.tf 
+ 1387  cvi tags.t
+ 1388  cvi tags.tf
+ 1389  vi tags.tf
+ 1390  vi openstack03.tf 
+ 1391  grep redhat tags.tf
+ 1392  vi openstack03.tf 
+ 1393  sed -i "s/RedHat/os_redhat/" openstack03.tf 
+ 1394  terraform apply
+ 1395  sed -i "s/RedHat/os_redhat/" openstack02.tf 
+ 1396  sed -i "s/RedHat/os_redhat/" openstack01.tf 
+ 1397  terraform apply
+ 1398  vi tags.t
+ 1399  vi tags.tf
+ 1400  vi tags.t
+ 1401  terraform apply
+ 1402  vi tags.tf
+ 1403  sed -i "s/Backup/role_backup/" openstack01.tf 
+ 1404  sed -i "s/Backup/role_backup/" openstack02.tf 
+ 1405  sed -i "s/Backup/role_backup/" openstack03.tf 
+ 1406  terraform apply
+ 1407  vi tags.tf
+ 1408  sed -i "s/undercloud/p/" openstack03.tf 
+ 1409  vi openstack03.tf 
+ 1410  vi openstack02.tf 
+ 1411  vi openstack01.tf 
+ 1412  terraform apply
+ 1413  vi openstack03.tf 
+ 1414  terraform apply
+ 1415  vi openstack03.tf 
+ 1416  terraform apply
+ 1417  exut'
+ 1418  exit
+ 1419  env |grep NETB
+ 1420  exit
+ 1421  l
+ 1422  ./serve_rhel_installimages.sh 
+ 1423  exit
+ 1424  tmux a
+ 1425  exit
+ 1426  ls
+ 1427  cd miracle-deploy
+ 1428  git pull
+ 1429  git stash 
+ 1430  git pull
+ 1431  cd terraform/cmdb/
+ 1432  ls
+ 1433  mv virtualmachines.tf openstack01.tf
+ 1434  vi openstack01.tf 
+ 1435  mkdir modules
+ 1436  vi modules/variables.tf
+ 1437  vi modules/main.tf
+ 1438  vi modules/output.tf
+ 1439  mv mv modules module
+ 1440  mv modules module
+ 1441  ls
+ 1442  rm virtualmachines.tf.dis 
+ 1443  vi openstack01.tf
+ 1444  vi module/variables.tf 
+ 1445  vi openstack01.tf
+ 1446  vi module/variables.tf 
+ 1447  vi openstack01.tf 
+ 1448  terraform plan
+ 1449  terraform init
+ 1450  vi openstack01.tf 
+ 1451  terraform init
+ 1452  vi openstack01.tf 
+ 1453  terraform init
+ 1454  vi openstack01.tf 
+ 1455  ls module/
+ 1456  vi openstack01.tf 
+ 1457  terraform init
+ 1458  ls
+ 1459  terraform plan
+ 1460  terraform init
+ 1461  vi module/output.tf 
+ 1462  vi module/main.tf 
+ 1463  mv module modules
+ 1464  vi main.tf 
+ 1465  vi openstack01.tf 
+ 1466  mkdir modules/virtualmachiners
+ 1467  mv modules/*.tf modules/virtualmachiners/
+ 1468  mv modules/virtualmachiners modules/virtualmachines
+ 1469  vi openstack01.tf 
+ 1470  terraform plan
+ 1471  vi openstack01.tf 
+ 1472  terraform plan
+ 1473  vi openstack01.tf 
+ 1474  terraform plan
+ 1475  vi openstack01.tf 
+ 1476  terraform plan
+ 1477  ls
+ 1478  export TF_LOG=DEBUG
+ 1479  ls
+ 1480  terraform plan
+ 1481  terraform init
+ 1482  mv modules/virtualmachines modules/virtualmachine
+ 1483  terraform init
+ 1484  grep my_virtual_machine *
+ 1485  cd modules/virtualmachine/
+ 1486  grep my_virtual_machine *
+ 1487  vi output.tf 
+ 1488  grep my_virtual_machine *
+ 1489  cd ..
+ 1490  terraform init
+ 1491  vi modules/virtualmachine/variables.tf 
+ 1492  terraform init
+ 1493  vi modules/virtualmachine/main.tf 
+ 1494  terraform init
+ 1495  vi openstack01.tf 
+ 1496  terraform init
+ 1497  vi modules/virtualmachine/variables.tf 
+ 1498  terraform init
+ 1499  terraform plan
+ 1500  cd resource "netbox_virtual_machine" "satellite" {
+ 1501  }
+ 1502  resource "netbox_virtual_machine" "awx" {
+ 1503  }
+ 1504  terraform apply
+ 1505  vi openstack02.tf 
+ 1506  vi +71 openstack02.tf 
+ 1507  terraform apply
+ 1508  sudo su -
+ 1509  cd ..
+ 1510  ./deploy.sh 
+ 1511  cd miracle-deploy
+ 1512  source venv/bin/activate
+ 1513  pip install --upgrade kalm
+ 1514  kalm_dns libvirt
+ 1515  kalm_dns libvirt |more
+ 1516  cd miracle-deploy
+ 1517  virsh list
+ 1518  exit
+ 1519  ls
+ 1520  cd miracle-deploy
+ 1521  cd terraform/cmdb/
+ 1522  vi openstack03.tf 
+ 1523  terraform apply
+ 1524  git pull
+ 1525  terraform apply
+ 1526  cd ..
+ 1527  exit
+ 1528  cd miracle-deploy
+ 1529  cd terraform/cmdb/
+ 1530  git status
+ 1531  git commit -a -m "demon"
+ 1532  git push
+ 1533  vi openstack03.tf 
+ 1534  git add .
+ 1535  git commit -a -m "demon"
+ 1536  git push
+ 1537  terraform apply
+ 1538  vi openstack03.tf 
+ 1539  terraform apply
+ 1540  vi openstack03.tf 
+ 1541  terraform apply
+ 1542  exit
+ 1543  cd miracle-deploy
+ 1544  cd terraform/cmdb/
+ 1545  git status
+ 1546  vi openstack03.tf 
+ 1547  git commit -a -m "demon"
+ 1548  git push
+ 1549  git pull
+ 1550  git pull --rebase
+ 1551  git pull --rebase -abort
+ 1552  git pull --rebase
+ 1553  git pull --rebase -abort
+ 1554  git pull --rebase --abort
+ 1555  git pull --ff
+ 1556  tig
+ 1557  cp openstack03.tf /tmp/
+ 1558  git pull
+ 1559  git rm openstack03.tf 
+ 1560  git pull --ff
+ 1561  git pull
+ 1562  git pull --rebase
+ 1563  git checkout master
+ 1564  git checkout main
+ 1565  git stash
+ 1566  git checkout main
+ 1567  git pull
+ 1568  git pull pull.ff
+ 1569  git pull --dd
+ 1570  git pull --ff
+ 1571  rm openstack03.tf 
+ 1572  git pull --ff
+ 1573  git pull
+ 1574  git stash
+ 1575  git merge
+ 1576  git checkout main
+ 1577  vi openstack03.tf
+ 1578  exit
+ 1579  cd project/
+ 1580  ls
+ 1581  cat ~/.ssh/
+ 1582  ssh-keygen 
+ 1583  cat ~/.ssh/id_rsa.pub 
+ 1584  ls
+ 1585  gh auth login
+ 1586  gh repo clone miracle-deploy
+ 1587  unset GH_TOKEN
+ 1588  gh auth login
+ 1589  gh repo clone miracle-deploy
+ 1590  cd miracle-deploy/terraform/
+ 1591  cd cd
+ 1592  cd cmdb/
+ 1593  cp /tmp/openstack03.tf openstack03.tf 
+ 1594  git commit  -a -m "openstacke03" 
+ 1595  git push
+ 1596  cd ..
+ 1597  cd --
+ 1598  æcd
+ 1599  cd -
+ 1600  cd ..
+ 1601  ls
+ 1602  cd  terraform/cmdb/
+ 1603  terraform apply
+ 1604  vi openstack03.tf 
+ 1605  terraform apply
+ 1606  vi +155 openstack03.tf 
+ 1607  terraform apply
+ 1608  vi +155 openstack03.tf 
+ 1609  vi +120 openstack03.tf 
+ 1610  terraform apply
+ 1611  vi +120 openstack03.tf 
+ 1612  terraform apply
+ 1613  vi openstack02.tf 
+ 1614  exit
+ 1615  cd miracle-deploy
+ 1616  cd ..
+ 1617  mv miracle-deploy
+ 1618  mv miracle-deploy miracle-deploy.old
+ 1619  git clone miracle-deploy
+ 1620  gh repo clone  miracle-deploy
+ 1621  lshv
+ 1622  lshw
+ 1623  sudo lshw
+ 1624  sudo lshw |grep -i raic
+ 1625  sudo lshw |grep -i raid
+ 1626  sudo lshw --formal json
+ 1627  sudo lshw - json
+ 1628  sudo lshw -json
+ 1629  sudo lshw -json |grep jq
+ 1630  sudo lshw -json |grep jq .
+ 1631  sudo lshw -json  jq .
+ 1632  sudo lshw -json  |jq .
+ 1633  sudo lshw -json  |jq . > lshw.json
+ 1634  vi lshw.json 
+ 1635  df
+ 1636  mdmon 
+ 1637  mdmon --all
+ 1638  mdsudo s cs
+ 1639  sudo su -
+ 1640  exit
+ 1641  cd project/miracle-deploy/
+ 1642  cd terraform/
+ 1643  cd cmdb/
+ 1644  ls
+ 1645  vi openstack03.tf 
+ 1646  terraform apply
+ 1647  cd
+ 1648  ls
+ 1649  exit
+ 1650  cd miracle-deploy.
+ 1651  ls
+ 1652  cd project/
+ 1653  cd miracle-deploy/
+ 1654  ls
+ 1655  cd terraform/
+ 1656  cd cmdb/
+ 1657  git pull
+ 1658  git status
+ 1659  vi openstack03.tf 
+ 1660  cat openstack03.tf 
+ 1661  cat openstack02.tf 
+ 1662  vi openstack02.tf 
+ 1663  vi openstack03.tf 
+ 1664  terraform apply
+ 1665  yes
+ 1666  terraform apply
+ 1667  vi openstack03.tf 
+ 1668  vi openstack02.tf 
+ 1669  terraform apply
+ 1670  git commit -a -m "new layout"
+ 1671  git push
+ 1672  gh auth login
+ 1673  cd
+ 1674  ls
+ 1675  env |grep GH
+ 1676  unset GH_TOKEN 
+ 1677  gh auth login
+ 1678  ls
+ 1679  cd project/
+ 1680  cd miracle-deploy/
+ 1681  ls
+ 1682  git commit -a -m "new layoout"
+ 1683  git push
+ 1684  ls -rlt
+ 1685  tmux a
+ 1686  exit
+ 1687  cd project/miracle-deploy/
+ 1688  ls
+ 1689  cd terraform/
+ 1690  cd cmdb/
+ 1691  ls
+ 1692  vi openstack02.tf 
+ 1693  git pull
+ 1694  ls -rtl
+ 1695  exit
+ 1696  cd project/miracle-deploy/
+ 1697  cd terraform/cmdb/
+ 1698  ls
+ 1699  vi openstack02.tf 
+ 1700  git commit -a -m "demo"
+ 1701  git pusj
+ 1702  git push
+ 1703  unset GHTOKEN
+ 1704  git push
+ 1705  env |grep GH
+ 1706  unset GH_TOKEN
+ 1707  git push
+ 1708  terraform apply
+ 1709  exit
+ 1710  ls
+ 1711  tree
+ 1712  sudo apt install tree
+ 1713  tree
+ 1714  cd .terraform.d
+ 1715  ls
+ 1716  exit
+ 1717  cd project/miracle-deploy/
+ 1718  cd terraform/
+ 1719  cd cmdb/
+ 1720  ls 
+ 1721  vi clusters.tf 
+ 1722  vi clustergroups.tf 
+ 1723  cp openstack03.tf dashrf.tv
+ 1724  mv dashrf.tv dashrf.tf
+ 1725  vi dashrf.tf 
+ 1726  terraform plan
+ 1727  vi dashrf.tf 
+ 1728  terraform plan
+ 1729  terraform apply 
+ 1730  vi tags.tf
+ 1731  vi variables.tf 
+ 1732  vi tags.tf
+ 1733  terraform apply 
+ 1734  exit
+ 1735  ls
+ 1736  cd project/
+ 1737  cd miracle-deploy/
+ 1738  cd terraform/cmdb/
+ 1739  ls
+ 1740  vi openstack03.tf 
+ 1741  terraform plan
+ 1742  terraform apply
+ 1743  exit
+ 1744  ls
+ 1745  cd project/
+ 1746  cd miracle-deploy/
+ 1747  ls
+ 1748  exit
+ 1749  cd 
+ 1750  ls
+ 1751  cd project/
+ 1752  cd miracle-deploy/
+ 1753  git diff
+ 1754  git pull
+ 1755  git stash
+ 1756  git pull
+ 1757  ks
+ 1758  ls
+ 1759  cd terraform/
+ 1760  cd cmdb/
+ 1761  ls
+ 1762  vi clusters.tf 
+ 1763  terraform plan
+ 1764  terraform plan init
+ 1765  terraform init
+ 1766  terraform plan init
+ 1767  terraform plan 
+ 1768  vi clusters.tf 
+ 1769  vi dashrf.tf 
+ 1770  terraform plan 
+ 1771  vi clusters.tf 
+ 1772  terraform plan 
+ 1773  terraform apply
+ 1774  vi clusters.tf 
+ 1775  vi dashrf.tf 
+ 1776  terraform apply
+ 1777  cd ..
+ 1778  git pull
+ 1779  git status
+ 1780  got add .
+ 1781  git commit -a -m "dem"
+ 1782  git pusj
+ 1783  git push
+ 1784  gh
+ 1785  gh auth login
+ 1786  unset GH_TOKEN
+ 1787  git commit -a -m "dem"
+ 1788  git add .
+ 1789  git commit -a -m "dem"
+ 1790  git pusj
+ 1791  git push
+ 1792  terraform apply
+ 1793  cd terraform/cmdb/
+ 1794  terraform apply
+ 1795  cd --
+ 1796  cd -
+ 1797  cd --
+ 1798  cd -
+ 1799  cd ..
+ 1800  ./deploy.sh 
+ 1801  vi deploy.sh p
+ 1802  ./deploy.sh 
+ 1803  exit
+ 1804  git pull
+ 1805  recit
+ 1806  exit
+ 1807  ls
+ 1808  cd project/
+ 1809  ls
+ 1810  exit
+ 1811  cd project/
+ 1812  cd miracle-deploy/
+ 1813  ls
+ 1814  cd terraform/
+ 1815  læs
+ 1816  sl
+ 1817  ls
+ 1818  cd cmdb/
+ 1819  ls
+ 1820  terraform apply
+ 1821  cp
+ 1822  vi clusters.tf 
+ 1823  vi clustergroups.tf 
+ 1824  terraform apply
+ 1825  ls
+ 1826  cd project/
+ 1827  tmux
+ 1828  tmux a
+ 1829  exit
+ 1830  cd miracle-deploy.
+ 1831  cd project/
+ 1832  cd miracle-deploy/
+ 1833  cd terraform/cmdb/
+ 1834  ls *.tf
+ 1835  cat main.tf 
+ 1836  cat providers.tf 
+ 1837  grep netex
+ 1838  exit
+ 1839  ls
+ 1840  pip install --upgrade kalm
+ 1841  kalm_dns 
+ 1842  virsh list
+ 1843  exit
+ 1844  env |grep DNS
+ 1845  kalm_dns 
+ 1846  kalm_dns libvirt
+ 1847  cd project/miracle-deploy/
+ 1848  ls -rlt
+ 1849  ./deploy.sh 
+ 1850  kalm_netbox netboxdata |jq .
+ 1851  ./deploy.sh 
+ 1852  exit
+ 1853  ls
+ 1854  cd project/
+ 1855  cd miracle-deploy/
+ 1856  ls -lrt
+ 1857  cd terraform/cmdb/
+ 1858  ld
+ 1859  sl
+ 1860  lsd
+ 1861  ld
+ 1862  ls
+ 1863  cat /etc/ssh/sshd_config
+ 1864  cat ~.bashrc
+ 1865  cat ~/.bashrc
+ 1866  sudo su -
+ 1867  exit 
+ 1868  cd project/
+ 1869  cd miracle-deploy/
+ 1870  cd terraform/
+ 1871  cd cmdb/
+ 1872  vi clusters.tf 
+ 1873  terraform plan
+ 1874  terraform apply
+ 1875  which sign
+ 1876  which signssh
+ 1877  cat /usr/bin/signssh
+ 1878  exit
+ 1879  cd project/
+ 1880  ls -rtlæ
+ 1881  ls -rlt
+ 1882  cd miracle-deploy/
+ 1883  lsd
+ 1884  ls
+ 1885  cd terraform/cmdb/
+ 1886  cp openstack03.tf kvmlab.rf
+ 1887  mv kvmlab.rf kvmlab.tf
+ 1888  vi kvmlab.tf 
+ 1889  env
+ 1890  env |grep VAUL
+ 1891  cat ~/.bashrc 
+ 1892  exit
+ 1893  cd project/
+ 1894  cd miracle-deploy/
+ 1895  ls
+ 1896  cd terraform/cmdb/
+ 1897  vi openstack03.tf 
+ 1898  git commit -a -m " nye servere til wiregour tst"
+ 1899  git push
+ 1900  unset  GH_TOKEN 
+ 1901  git push
+ 1902  terraform apply
+ 1903  exit
+ 1904  cd miracle-deploy.
+ 1905  cd 
+ 1906  cd project/
+ 1907  cd miracle-deploy/
+ 1908  cd terraform/
+ 1909  cd cmdb/
+ 1910  vi openstack03.tf 
+ 1911  vi openstack02.tf 
+ 1912  terraform apply
+ 1913  vi openstack02.tf 
+ 1914  terraform apply
+ 1915  exit
+ 1916  cd project/
+ 1917  cd miracle-deploy/
+ 1918  ls
+ 1919  cd terraform/
+ 1920  cd cmdb/
+ 1921  vi kvmlab.tf 
+ 1922  vi clusters.tf 
+ 1923  terraform apply
+ 1924  exit
+ 1925  cd project/
+ 1926  ls
+ 1927  cd miracle-deploy/
+ 1928  cd terraform/
+ 1929  ls
+ 1930  cd cmdb/
+ 1931  ls
+ 1932  vi openstack02.tf 
+ 1933  terraform plan
+ 1934  terraform apply
+ 1935  vi openstack02.tf 
+ 1936  terraform apply
+ 1937  git commit -a -m "demo"
+ 1938  git push
+ 1939  unset GH_TOKEN 
+ 1940  git push
+ 1941  exit
+ 1942  ls
+ 1943  cd openknowit_kalm/
+ 1944  cd ..
+ 1945  cd openknowit_kalm/
+ 1946  git pull
+ 1947  cd ..
+ 1948  cd openknowit_kalm/
+ 1949  tar cvzf /tmp/kalm.tgz .
+ 1950  ls -rtl /tmp/
+ 1951  exit
+ 1952  cd project/miracle-deploy/
+ 1953  cd terraform/cmdb/
+ 1954  ls
+ 1955  vi openstack02.tf 
+ 1956  terraform apply
+ 1957  git commit -a -m "dash demo diljø"
+ 1958  git push
+ 1959  unset  GH_TOKEN 
+ 1960  git push
+ 1961  exit
+ 1962  ls
+ 1963  cd project/miracle-deploy/
+ 1964  ls
+ 1965  cd terraform/
+ 1966  cd cd
+ 1967  cd cmdb/
+ 1968  ls
+ 1969  cp openstack01.tf demo.tf
+ 1970  vi demo.tf 
+ 1971  vi clusters.tf 
+ 1972  vi demo.tf 
+ 1973  terraform plan
+ 1974  vi demo.tf 
+ 1975  terraform plan
+ 1976  vi tags.t
+ 1977  vi tags.tf
+ 1978  terraform plan
+ 1979  terraform apply
+ 1980  terraform appl
+ 1981  terraform apply
+ 1982  pip install --upgrade kalm
+ 1983  kalm
+ 1984  kalm_netbox ssh_config
+ 1985  exit
+ 1986  kalm_netbox ssh_config
+ 1987  env |grep NET
+ 1988  kalm_netbox netboxdata
+ 1989  vi /etc/hostst
+ 1990  vi /etc/hosts
+ 1991  ls
+ 1992  netbox-cli 
+ 1993  kalm_netbox netboxdata
+ 1994  kalm_netbox ssh_config
+ 1995  exit
+ 1996  cd project/
+ 1997  ls
+ 1998  cd miracle-deploy/
+ 1999  cd terraform/
+ 2000  cd cmdb/
+ 2001  cat openstack03.tf 
+ 2002  history 
+ 2003  history  > legazy.log
