@@ -37,3 +37,8 @@ resource "netbox_cluster" "kvmlab" {
   cluster_group_id = netbox_cluster_group.openstack.id
 }
 
+resource "netbox_cluster" "rhctrl-nuk01" {
+  cluster_type_id  = netbox_cluster_type.kvm.id
+  name             = "rhctrl-nuk01.sianiut.tele.gl"
+  cluster_group_id = netbox_cluster_group.tusass.id
+}

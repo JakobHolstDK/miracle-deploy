@@ -44,6 +44,7 @@ timezone Europe/Copenhagen --utc
 rootpw --iscrypted $6$5FjUDSrOrfKla1eC$Dk4naBHuSBb5E64asC/V8uu93HqHzOUb9B0k76SPDwC7P1Xkf/XEJWHSiz4C1ikTt8AxkCFhnUg6WZtjT6Mg7.
 
 %post --interpreter=/usr/bin/bash
+/usr/bin/hostnamectl hostname {{ newhostname }}
 /usr/bin/touch /opt/keepkalm
 /usr/bin/curl -o /etc/ssh/trusted-user-ca-keys.pem https://vault.openknowit.com/v1/ssh-client-signer/public_key
 echo "AuthorizedPrincipalsFile /etc/ssh/AuthorizedPrincipals" >> /etc/ssh/sshd_config

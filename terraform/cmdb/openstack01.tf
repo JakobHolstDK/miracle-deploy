@@ -1,3 +1,80 @@
+resource "netbox_virtual_machine" "demotl" {
+  cluster_id   = netbox_cluster.openstack[0].id
+  name         = "demotl01"      
+  tags         = [ "os_redhat", "role_backup" ]
+  disk_size_gb = 40
+  memory_mb    = 8192
+  vcpus        = "8"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode(
+        {
+        "os": {
+                "activation_key": "Faceted-Oil-Scion6",
+                "operating_system": "rhel-9.2",
+                "rhel_org": "6207854A"
+        },
+        "wireguard": {
+                "network": "wgdemo",
+                "public_key": "",
+                "role": "client"
+                }
+        }
+  )
+}
+
+
+resource "netbox_virtual_machine" "demoisilon" {
+  cluster_id   = netbox_cluster.openstack[0].id
+  name         = "demoisilon"
+  tags         = [ "os_redhat", "role_backup" ]
+  disk_size_gb = 40
+  memory_mb    = 8192
+  vcpus        = "8"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode(
+        {
+        "os": {
+                "activation_key": "Faceted-Oil-Scion6",
+                "operating_system": "rhel-9.2",
+                "rhel_org": "6207854A"
+        },
+        "wireguard": {
+                "network": "wgdemo",
+                "public_key": "",
+                "role": "client"
+                }
+        }
+  )
+}
+
+
+resource "netbox_virtual_machine" "rpmrepo01" {
+  cluster_id   = netbox_cluster.openstack[0].id
+  name         = "rpmrepo01" 
+  tags         = [ "os_redhat", "role_backup" ]
+  disk_size_gb = 40
+  memory_mb    = 8192
+  vcpus        = "8"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode(
+        {
+        "os": {
+                "activation_key": "Faceted-Oil-Scion6",
+                "operating_system": "rhel-9.2",
+                "rhel_org": "6207854A"
+        },
+        "wireguard": {
+                "network": "wgdemo",
+                "public_key": "",
+                "role": "client"
+                }
+        }
+  )
+}
+
 resource "netbox_virtual_machine" "demoautocat001" {
   cluster_id   = netbox_cluster.openstack[0].id
   name         = "demoautocat001"
@@ -263,7 +340,7 @@ resource "netbox_virtual_machine" "demoautosso001" {
 	{
     	"os": {
         	"activation_key": "Faceted-Oil-Scion6",
-        	"operating_system": "rhel-9.2",
+        	"operating_system": "rhel-8.8",
         	"rhel_org": "6207854A"
     	},
     	"wireguard": {

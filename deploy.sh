@@ -33,7 +33,7 @@ do
 			echo $REL
 			MYREL=$(ls -1 /var/lib/libvirt/images/iso | grep $REL |sort -n |tail -1 | awk -F'.iso' '{ print $1 }')
 			
-			ansible-playbook create-ksfile.yml -e rel=${MYREL}
+			ansible-playbook create-ksfile.yml -e rel=${MYREL} -e newhostname=${name}
 			echo "create server $name"
 			virt-install --name $name \
                                      --location http://${FQDN}:8000/${MYREL}\
