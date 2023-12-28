@@ -48,6 +48,33 @@ resource "netbox_virtual_machine" "cv01" {
   )
 }
 
+resource "netbox_virtual_machine" "selinux01" {
+  cluster_id   = netbox_cluster.openstack[0].id
+  name         = "selinux01"
+  tags         = [ "os_redhat", "role_backup" ]
+  disk_size_gb = 40
+  memory_mb    = 8192
+  vcpus        = "8"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode(
+        {
+        "os": {
+                "activation_key": "Faceted-Oil-Scion6",
+                "operating_system": "rhel-9.2",
+                "rhel_org": "6207854A"
+        },
+        "wireguard": {
+                "network": "wgdemo",
+                "public_key": "",
+                "role": "client"
+                }
+        }
+  )
+}
+
+
+
 resource "netbox_virtual_machine" "openbuildservice" {
   cluster_id   = netbox_cluster.openstack[0].id
   name         = "openbuildservice01"
