@@ -59,6 +59,10 @@ resource "netbox_tag" "os_ubuntu"             {
 name      = "os_ubuntu"            
 color_hex =  var.color_map["Orange"] 
 }
+resource "netbox_tag" "os_win2022"             { 
+name      = "os_win2022"            
+color_hex =  var.color_map["Blue"] 
+}
 resource "netbox_tag" "os_redhat"             { 
 name      = "os_redhat"            
 color_hex =  var.color_map["OrangeRed"] 
