@@ -5,3 +5,4 @@ terraform.tfvars
 venv
 terraform-provider-netbox
 ks.cfg
+opentofu

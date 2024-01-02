@@ -1,8 +1,0 @@
-KVM     "Native linux libvirt kvm"
-ESXI800 "VMware vSphere ESXi 8.0.0"
-ESXI700 "VMware vSphere ESXi 7.0.0"
-ESXI67  "VMware vSphere ESXi 6.7"
-ESXI65  "VMware vSphere ESXi 6.5"
-ESXI55  "VMware vSphere ESXi 5.5"
-ESXI50  "VMware vSphere ESXi 5.0"
-ESXI41x "VMware vSphere ESXi 4.1.x"
