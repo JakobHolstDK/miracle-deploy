@@ -1,0 +1,31 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/db:/data/db
+
+  express:
+    image: node:14
+    container_name: express-app
+    working_dir: /app
+    volumes:
+      - ./express-app:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/your-database-name
+    depends_on:
+      - mongodb
+
+  jointjs:
+    image: nginx
+    container_name: jointjs-app
+    volumes:
+      - ./jointjs-app:/usr/share/nginx/html
+    ports:
+      - "8080:80"
+

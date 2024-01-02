@@ -1,65 +1,96 @@
-resource "netbox_tag" "os_redhat"             { 
-name      = "RedHat"            
-color_hex = "ff00ff" 
-}
-resource "netbox_tag" "os_windows"          { 
-name      = "Microsoft Windows" 
-color_hex = "ff40ff" 
-}
-resource "netbox_tag" "os_ubuntu"           { 
-name      = "Ubuntu"            
-color_hex = "ff40ff" 
-}
-resource "netbox_tag" "os_linux"            { 
-name      = "genric linux"      
-color_hex = "ff50ff" 
-}
-resource "netbox_tag" "os_debian"           { 
-name      = "Debian"            
-color_hex = "ff60ff" 
-}
-resource "netbox_tag" "role_openstack_overcloud"     { 
-name      = "overcloud"        
-color_hex = "ff70ff" 
-}
-resource "netbox_tag" "role_openstack_undercloud"     { 
-name      = "undercloud"        
-color_hex = "ff70ff" 
-}
-resource "netbox_tag" "role_monitoring"     { 
-name      = "Monitoring"        
-color_hex = "ff70ff" 
-}
-resource "netbox_tag" "role_backup"         { 
-name      = "Backup"            
-color_hex = "ff80ff" 
-}
-resource "netbox_tag" "SLA_production"      { 
-name      = "Production"        
-color_hex = "ff94ff" 
-}
-resource "netbox_tag" "SLA_preproduction"   { 
-name      = "PreProduction"     
-color_hex = "ff93ff" 
-}
-resource "netbox_tag" "kalm"   { 
-name      = "kalm"     
-color_hex = "ff93ff" 
-}
-resource "netbox_tag" "satellite"   { 
-name      = "satellite"     
-color_hex = "ff9322" 
-}
-resource "netbox_tag" "nfs"   { 
-name      = "nfs"     
-color_hex = "ff9322" 
-}
-resource "netbox_tag" "openstack"   { 
-name      = "openstack"     
-color_hex = "ff9311" 
+
+resource "netbox_tag" "aap"             { 
+name      = "aap"            
+color_hex =  var.color_map["Green"] 
 }
 
-resource "netbox_tag" "SLA_qa"              { 
-name      = "Quality assurance" 
-color_hex = "ff92ff" 
+resource "netbox_tag" "role_backup"             { 
+name      = "role_backup"            
+color_hex =  var.color_map["Cyan"] 
 }
+
+resource "netbox_tag" "role_kalm"             { 
+name      = "role_kalm"            
+color_hex =  var.color_map["Cyan"] 
+}
+
+resource "netbox_tag" "role_zabbix"             { 
+name      = "role_zabbix"            
+color_hex =  var.color_map["Cyan"] 
+}
+
+resource "netbox_tag" "service_nfsserver"             { 
+name      = "service_nfsserver"            
+color_hex =  var.color_map["Blue"] 
+}
+
+resource "netbox_tag" "service_openshiftmaster"             { 
+name      = "service_openshiftmaster"            
+color_hex =  var.color_map["Blue"] 
+}
+
+resource "netbox_tag" "service_openshiftworker"             { 
+name      = "service_openshiftworker"            
+color_hex =  var.color_map["Blue"] 
+}
+
+resource "netbox_tag" "service_openstackundercloud"             { 
+name      = "service_openstackundercloud"            
+color_hex =  var.color_map["Blue"] 
+}
+
+resource "netbox_tag" "service_openstackovercloud"             { 
+name      = "service_openstackovercloud"            
+color_hex =  var.color_map["Blue"] 
+}
+
+resource "netbox_tag" "service_satellite"             { 
+name      = "service_satellite"            
+color_hex =  var.color_map["Blue"] 
+}
+
+resource "netbox_tag" "sla_test"             { 
+name      = "sla_test"            
+color_hex =  var.color_map["Purple"] 
+}
+
+resource "netbox_tag" "sla_prerproduction"             { 
+name      = "sla_prerproduction"            
+color_hex =  var.color_map["Yellow"] 
+}
+
+resource "netbox_tag" "sla_production"             { 
+name      = "sla_production"            
+color_hex =  var.color_map["Red"] 
+}
+
+resource "netbox_tag" "sla_qa"             { 
+name      = "sla_qa"            
+color_hex =  var.color_map["Blue"] 
+}
+
+resource "netbox_tag" "os_ubuntu"             { 
+name      = "os_ubuntu"            
+color_hex =  var.color_map["Orange"] 
+}
+
+resource "netbox_tag" "os_redhat"             { 
+name      = "os_redhat"            
+color_hex =  var.color_map["OrangeRed"] 
+}
+
+resource "netbox_tag" "os_debian"             { 
+name      = "os_debian"            
+color_hex =  var.color_map["PowderBlue"] 
+}
+
+resource "netbox_tag" "os_linux"             { 
+name      = "os_linux"            
+color_hex =  var.color_map["LightSkyBlue"] 
+}
+
+resource "netbox_tag" "os_windows"             { 
+name      = "os_windows"            
+color_hex =  var.color_map["LightGreen"] 
+}
+

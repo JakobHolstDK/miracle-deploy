@@ -1,0 +1,67 @@
+  vars:
+    ansible01:
+      cpu: 2.0
+      disk_gb: 40
+      memory_mb: 8192
+    compute01:
+      cpu: 8.0
+      disk_gb: 100
+      memory_mb: 48000
+    compute02:
+      cpu: 8.0
+      disk_gb: 100
+      memory_mb: 48000
+    compute03:
+      cpu: 8.0
+      disk_gb: 100
+      memory_mb: 48000
+    controller01:
+      cpu: 2.0
+      disk_gb: 30
+      memory_mb: 8192
+    controller02:
+      cpu: 2.0
+      disk_gb: 30
+      memory_mb: 8192
+    controller03:
+      cpu: 2.0
+      disk_gb: 30
+      memory_mb: 8192
+    kalm01:
+      cpu: 2.0
+      disk_gb: 40
+      memory_mb: 8192
+    nfs01:
+      cpu: 2.0
+      disk_gb: 40
+      memory_mb: 8192
+    satellite01:
+      cpu: 2.0
+      disk_gb: 40
+      memory_mb: 8192
+    undercloud01:
+      cpu: 2.0
+      disk_gb: 40
+      memory_mb: 8192
+all:
+  children:
+  - clusters
+clusters:
+  hosts:
+  - openstack01.openknowit.com
+  - openstack02.openknowit.com
+  - openstack03.openknowit.com
+openstack01.openknowit.com:
+  hosts:
+  - ansible01
+  - compute01
+  - compute02
+  - compute03
+  - controller01
+  - controller02
+  - controller03
+  - kalm01
+  - nfs01
+  - satellite01
+  - undercloud01
+

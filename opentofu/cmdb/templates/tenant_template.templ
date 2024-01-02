@@ -1,0 +1,6 @@
+resource "netbox_tenant" "CUSTOMER" {
+  name = "CUSTOMER"
+  description = "DESCRIPTION"
+  slug = "SLUG"
+  group_id = netbox_tenant_group.GROUP.id
+}

@@ -1,0 +1,2 @@
+#NAME       CLUSTER         TAGS                  DISKSIZE MEMSIZE CPUS ROLE    TENANT OS     ORGID   ACTIVATIONKEY ENVIRONMENT ROLES
+exrhel0494  prodcluster01   "role_zabbix","aap"   40       8192    2    server  rm     rhel8  12345   letmein       production  kalmserver

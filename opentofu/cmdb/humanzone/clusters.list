@@ -1,0 +1,5 @@
+#NAME             CLUSTERTYPE       CLUSTERGROUP
+prodcluster01     ESXI700         vmware 
+prodcluster02     ESXI800         vmware 
+testcluster01     ESXI700         vmware 
+testcluster02     ESXI800         vmware 
