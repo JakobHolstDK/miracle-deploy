@@ -31,6 +31,27 @@ do
 			cat /tmp/server.json
 			REL=$(cat /tmp/server.json | jq .local_context_data.os.operating_system -r )
 			echo $REL
+			if [[ $REL == "win2022" ]];
+			then
+				echo "deploying a windows 2022 server"
+				MYREL=$(ls -1 /var/lib/libvirt/images/iso | grep $REL |sort -n |tail -1 | awk -F'.iso' '{ print $1 }')
+				echo $MYREL
+				virt-install --name $name \
+					     --import \
+					     --graphics=vnc,password=mypasswd,listen=0.0.0.0,port=6534 \
+                                             --osinfo detect=on \
+                                             --vcpus $CPU \
+                                             --memory $MEM \
+                                             --disk size=$DISK,sparse=true \
+					     --disk 'device=cdrom,path=/var/lib/libvirt/images/iso/win2022.iso,boot_order=2' \
+				             --disk 'path=/var/lib/libvirt/images/iso/config.iso,device=cdrom'
+
+
+				
+
+			fi
+
+				
 			MYREL=$(ls -1 /var/lib/libvirt/images/iso | grep $REL |sort -n |tail -1 | awk -F'.iso' '{ print $1 }')
 			
 			ansible-playbook create-ksfile.yml -e rel=${MYREL} -e newhostname=${name}
