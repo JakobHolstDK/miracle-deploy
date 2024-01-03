@@ -1,5 +1,5 @@
 resource "netbox_site" "fsn1" {
-  count = 20
+  count = 6
   name      = "fsn1-dc${format("%01d", count.index + 1)}"
   facility  = "Data center"
   latitude  = "50.4779"   # Latitude of Falkenstein, Germany
@@ -7,4 +7,14 @@ resource "netbox_site" "fsn1" {
   status    = "staging"
   timezone  = "Europe/Berlin"  # Timezone for Falkenstein, Germany
 }
+
+resource "netbox_site" "bremen" {
+  name      = "bremen"
+  facility  = "Office"
+  latitude = "55.6760"
+  longitude = "12.5649"
+  status    = "active"
+  timezone  = "Europe/Copenhagen"  # Timezone for CPH DK
+}
+
 

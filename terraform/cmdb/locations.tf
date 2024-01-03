@@ -1,5 +1,5 @@
 resource "netbox_location" "falkenstein" {
-  count = 20
+  count = 6
   name        = "falkenstein"
   description = "my description"
   site_id     = netbox_site.fsn1[count.index].id

@@ -1,3 +1,7 @@
 resource "netbox_manufacturer" "Lenovo" {
-  name = "testmanufacturer"
+  name = "lenovo"
 }
+resource "netbox_manufacturer" "Intel" {
+  name = "Intel"
+}
+

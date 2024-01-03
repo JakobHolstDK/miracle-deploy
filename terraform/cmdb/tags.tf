@@ -83,3 +83,7 @@ resource "netbox_tag" "openshiftmaster"      {
 name      = "openshiftmaster"
 color_hex =  var.color_map["LightGreen"] 
 }
+resource "netbox_tag" "workstation"      { 
+name      = "workstation"
+color_hex =  var.color_map["Green"] 
+}

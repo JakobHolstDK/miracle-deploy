@@ -1,0 +1,12 @@
+resource "netbox_device_type" "nuc" {
+  model           = "nuc"
+  manufacturer_id = netbox_manufacturer.Intel.id
+}
+resource "netbox_device" "flemming" {
+  name         = "flemming"
+  tags         = [ "os_debian", "role_backup", "workstation" ]
+  role_id      = 59 
+  site_id      = netbox_site.bremen.id
+  device_type_id = netbox_device_type.nuc.id
+  tenant_id    = netbox_tenant.knowit.id
+}

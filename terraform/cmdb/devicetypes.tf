@@ -1,9 +1,5 @@
-resource "netbox_manufacturer" "test" {
-  name = "test"
-}
-
-resource "netbox_device_type" "test" {
-  model           = "test"
+resource "netbox_device_type" "nuc" {
+  model           = "nuc"
   part_number     = "123"
-  manufacturer_id = netbox_manufacturer.test.id
+  manufacturer_id = netbox_manufacturer.Intel.id
 }
