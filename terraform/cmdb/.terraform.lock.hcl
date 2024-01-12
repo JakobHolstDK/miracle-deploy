@@ -2,9 +2,9 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/e-breuninger/netbox" {
-  version     = "3.5.3"
-  constraints = "3.5.3"
+  version     = "3.7.5"
+  constraints = "3.7.5"
   hashes = [
-    "h1:ftlZ5stLY98RANh2on8APthFPcRYW0EbvMFAr9DgZFc=",
+    "h1:0Yjrby3xsTjGzEa83tuQu1feOOg0ZptfR++yjglaH6U=",
   ]
 }

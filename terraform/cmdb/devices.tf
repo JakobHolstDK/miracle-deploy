@@ -4,3 +4,5 @@ resource "netbox_device" "flemming" {
   role_id        = netbox_device_role.workstation.id
   site_id        = netbox_site.bremen.id
 }
+
+
