@@ -1,4 +1,3 @@
-
 resource "netbox_virtual_machine" "datawarehouse" {
   count = 1
   cluster_id   = netbox_cluster.openstack[2].id

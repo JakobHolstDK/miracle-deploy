@@ -193,6 +193,34 @@ resource "netbox_virtual_machine" "rancher" {
   )
 }
 
+
+resource "netbox_virtual_machine" "eriktest" {
+  count = 6
+  cluster_id   = netbox_cluster.openstack[1].id
+  name         = "erik${format("%02d", count.index + 1)}"
+  tags         = [ "os_redhat", "role_backup" ]
+  disk_size_gb = 30
+  memory_mb    = 4096
+  vcpus        = "8"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode(
+        {
+        "os": {
+                "activation_key": "Faceted-Oil-Scion6",
+                "operating_system": "rhel-9.3",
+                "rhel_org": "6207854A"
+        },
+        "wireguard": {
+                "network": "wgdemo",
+                "public_key": "",
+                "role": "client"
+                }
+        }
+  )
+}
+
+
 resource "netbox_virtual_machine" "rancherctl" {
   count = 1
   cluster_id   = netbox_cluster.openstack[1].id
