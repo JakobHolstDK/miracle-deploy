@@ -1,11 +1,11 @@
-resource "netbox_virtual_machine" "wgtest" {
+resource "netbox_virtual_machine" "awx" {
   count = 3
   cluster_id   = netbox_cluster.openstack[1].id
-  name         = "wgtest${format("%02d", count.index + 1)}"
+  name         = "awx${format("%02d", count.index + 1)}"
   tags         = [ "os_redhat",  "role_backup" ]
   disk_size_gb = 50
-  memory_mb    = 1024
-  vcpus        = "2"
+  memory_mb    = 4096
+  vcpus        = "8"
   role_id      = netbox_device_role.server.id
   tenant_id    = netbox_tenant.knowit.id
   local_context_data = jsonencode(
@@ -23,6 +23,8 @@ resource "netbox_virtual_machine" "wgtest" {
         }
   )
 }
+
+
 
 resource "netbox_virtual_machine" "elementor" {
   count = 1
@@ -77,34 +79,6 @@ resource "netbox_virtual_machine" "perconatest" {
         }
   )
 }
-
-
-resource "netbox_virtual_machine" "tltest" {
-  count = 3
-  cluster_id   = netbox_cluster.openstack[1].id
-  name         = "tltest${format("%02d", count.index + 1)}"
-  tags         = [ "os_redhat",  "role_backup" ]
-  disk_size_gb = 50
-  memory_mb    = 3500
-  vcpus        = "1"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
 
 
 
