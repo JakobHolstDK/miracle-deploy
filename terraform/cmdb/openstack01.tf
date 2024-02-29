@@ -1,110 +1,9 @@
-resource "netbox_virtual_machine" "jenkins" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "jenkins01"      
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-resource "netbox_virtual_machine" "guacamole"{
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "guacamole01"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-resource "netbox_virtual_machine" "excalidraw" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "excalidraw01"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
 resource "netbox_virtual_machine" "static" {
   cluster_id   = netbox_cluster.openstack[0].id
   name         = "static01"
   tags         = [ "os_redhat", "role_backup" ]
   disk_size_gb = 40
   memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-
-resource "netbox_virtual_machine" "demokalmctl" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "demokalmctl"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 4096
   vcpus        = "8"
   role_id      = netbox_device_role.server.id
   tenant_id    = netbox_tenant.knowit.id
@@ -161,6 +60,8 @@ resource "netbox_virtual_machine" "ignite01" {
   tenant_id    = netbox_tenant.knowit.id
   local_context_data = jsonencode(
         {
+	"system": "ignite",
+	"role": "app",
         "os": {
                 "activation_key": "Faceted-Oil-Scion6",
                 "operating_system": "rhel-9.2",
@@ -171,9 +72,74 @@ resource "netbox_virtual_machine" "ignite01" {
                 "public_key": "",
                 "role": "client"
                 }
+	"zabbix":  {
+                "server": "zabbix.openknowit.com",
+		"hostgroups": [
+			"Linux servers", 
+			"Ignite servers",
+			"Rhel9 servers"
+			],
+		"templates": [
+			"Template System ignite Role app ", 
+			"Template os rhel 9"
+			],
+		"proxy": [
+			{ "name": "Zabbix Proxy 01", "default": "True"	},
+			{ "name": "Zabbix Proxy 02", "default": "False"	},
+			{ "name": "Zabbix Proxy 03", "default": "False"	},
+			{ "name": "Zabbix Proxy 04", "default": "False"	},
+			],
+                }
         }
   )
 }
+
+
+resource "netbox_virtual_machine" "influx01" {
+  cluster_id   = netbox_cluster.openstack[0].id
+  name         = "influx01"
+  tags         = [ "os_redhat", "role_backup" ]
+  disk_size_gb = 100
+  memory_mb    = 8192
+  vcpus        = "8"
+  role_id      = netbox_device_role.server.id
+  tenant_id    = netbox_tenant.knowit.id
+  local_context_data = jsonencode(
+        {
+        "system": "ignite",
+        "role": "app",
+        "os": {
+                "activation_key": "Faceted-Oil-Scion6",
+                "operating_system": "rhel-9.2",
+                "rhel_org": "6207854A"
+        },
+        "wireguard": {
+                "network": "wgdemo",
+                "public_key": "",
+                "role": "client"
+                }
+        "zabbix":  {
+                "server": "zabbix.openknowit.com",
+                "hostgroups": [
+                        "Linux servers",
+                        "Ignite servers",
+                        "Rhel9 servers"
+                        ],
+                "templates": [
+                        "Template System ignite Role app ",
+                        "Template os rhel 9"
+                        ],
+                "proxy": [
+                        { "name": "Zabbix Proxy 01", "default": "True"  },
+                        { "name": "Zabbix Proxy 02", "default": "False" },
+                        { "name": "Zabbix Proxy 03", "default": "False" },
+                        { "name": "Zabbix Proxy 04", "default": "False" },
+                        ],
+                }
+        }
+  )
+}
+
 
 
 resource "netbox_virtual_machine" "selinux01" {
@@ -201,60 +167,6 @@ resource "netbox_virtual_machine" "selinux01" {
   )
 }
 
-
-
-resource "netbox_virtual_machine" "openbuildservice" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "openbuildservice01"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-
-resource "netbox_virtual_machine" "demoisilon" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "demoisilon"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-
 resource "netbox_virtual_machine" "rpmrepo01" {
   cluster_id   = netbox_cluster.openstack[0].id
   name         = "rpmrepo01" 
@@ -280,32 +192,6 @@ resource "netbox_virtual_machine" "rpmrepo01" {
   )
 }
 
-resource "netbox_virtual_machine" "demoautocat001" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "demoautocat001"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-
 resource "netbox_virtual_machine" "semaphore01" {
   cluster_id   = netbox_cluster.openstack[0].id
   name         = "semaphore01"
@@ -330,233 +216,3 @@ resource "netbox_virtual_machine" "semaphore01" {
         }
   )
 }
-
-
-resource "netbox_virtual_machine" "demoautoedactl001" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "demoautoedactl001"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-resource "netbox_virtual_machine" "demoautoctl001" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "demoautoctl001"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-resource "netbox_virtual_machine" "demoautoexec001" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "demoautoexec001"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-resource "netbox_virtual_machine" "demoautoexec002" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "demoautoexec002"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-resource "netbox_virtual_machine" "demoautoexec003" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "demoautoexec003"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-resource "netbox_virtual_machine" "demoautohub001" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "demoautohub001"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-  	{
-  	"os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-resource "netbox_virtual_machine" "demoawx001" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "demoawx001"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 100
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-resource "netbox_virtual_machine" "demoautdb001" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "demoautodb001"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 100
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-        {
-        "os": {
-                "activation_key": "Faceted-Oil-Scion6",
-                "operating_system": "rhel-9.2",
-                "rhel_org": "6207854A"
-        },
-        "wireguard": {
-                "network": "wgdemo",
-                "public_key": "",
-                "role": "client"
-                }
-        }
-  )
-}
-
-resource "netbox_virtual_machine" "demoautosso001" {
-  cluster_id   = netbox_cluster.openstack[0].id
-  name         = "demoautosso001"
-  tags         = [ "os_redhat", "role_backup" ]
-  disk_size_gb = 40
-  memory_mb    = 8192
-  vcpus        = "8"
-  role_id      = netbox_device_role.server.id
-  tenant_id    = netbox_tenant.knowit.id
-  local_context_data = jsonencode(
-	{
-    	"os": {
-        	"activation_key": "Faceted-Oil-Scion6",
-        	"operating_system": "rhel-8.8",
-        	"rhel_org": "6207854A"
-    	},
-    	"wireguard": {
-        	"network": "wgdemo",
-        	"public_key": "",
-        	"role": "client"
-    		}
-	}
-  )
-}
-
-
-
-
