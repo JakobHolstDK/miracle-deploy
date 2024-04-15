@@ -38,7 +38,7 @@ do
 				echo $MYREL
 				virt-install --name $name \
 					     --import \
-					     --graphics=vnc,password=mypasswd,listen=0.0.0.0,port=6534 \
+					     --graphics=vnc,password=mypasswd,listen=0.0.0.0,port=6535 \
                                              --osinfo detect=on \
                                              --vcpus $CPU \
                                              --memory $MEM \

@@ -31,14 +31,9 @@ resource "netbox_cluster" "dashrf" {
   cluster_group_id = netbox_cluster_group.openstack.id
 }
 
-resource "netbox_cluster" "kvmlab" {
+resource "netbox_cluster" "dashapp" {
   cluster_type_id  = netbox_cluster_type.kvm.id
-  name             = "kvmlab.openknowit.com"
-  cluster_group_id = netbox_cluster_group.openstack.id
+  name             = "dashapp"
+  cluster_group_id = netbox_cluster_group.dash.id
 }
 
-resource "netbox_cluster" "rhctrl-nuk01" {
-  cluster_type_id  = netbox_cluster_type.kvm.id
-  name             = "rhctrl-nuk01.sianiut.tele.gl"
-  cluster_group_id = netbox_cluster_group.tusass.id
-}
