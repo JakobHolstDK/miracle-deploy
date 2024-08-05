@@ -1,0 +1,5 @@
+[
+OU=Group,OU=Countries,OU=DSV.COM,DC=DSV,DC=COM",
+  "SCOPE_SUBTREE",
+  "(objectClass=group)"
+]
